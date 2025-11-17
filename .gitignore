@@ -416,3 +416,26 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Quarto
+/.quarto/
+/_site/
+_files/
+*_files/
+*.html
+*.pdf
+*.pptx
+
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Python
+.ipynb_checkpoints/
+*.pyc
+__pycache__/
+venv/
+.venv/

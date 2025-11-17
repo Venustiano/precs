@@ -1,0 +1,125 @@
+---
+title: "Sample Quarto Presentation"
+subtitle: "With Python and R Code Examples"
+author: "Your Name"
+format:
+  revealjs:
+    theme: dark
+    slide-number: true
+    chalkboard: true
+    preview-links: auto
+---
+
+## Introduction
+
+This is a sample Quarto presentation demonstrating:
+
+- Python code execution
+- R code execution
+- Mixed language support
+
+## Python Example
+
+```{python}
+#| echo: true
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate data
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+# Create plot
+plt.figure(figsize=(8, 4))
+plt.plot(x, y, 'b-', linewidth=2)
+plt.title('Sine Wave')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.grid(True)
+plt.show()
+```
+
+## Python Data Analysis
+
+```{python}
+#| echo: true
+import pandas as pd
+
+# Create sample data
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+    'Score': [85, 92, 78, 95],
+    'Grade': ['B', 'A', 'C', 'A']
+}
+
+df = pd.DataFrame(data)
+print(df)
+print(f"\nAverage Score: {df['Score'].mean():.2f}")
+```
+
+## R Example
+
+```{r}
+#| echo: true
+library(ggplot2)
+
+# Create sample data
+data <- data.frame(
+  x = 1:10,
+  y = rnorm(10)
+)
+
+# Create plot
+ggplot(data, aes(x = x, y = y)) +
+  geom_line(color = "blue", size = 1) +
+  geom_point(color = "red", size = 3) +
+  theme_minimal() +
+  labs(title = "Random Data Plot", x = "Index", y = "Value")
+```
+
+## R Data Summary
+
+```{r}
+#| echo: true
+# Create sample dataset
+iris_summary <- iris |>
+  subset(Species == "setosa") |>
+  summary()
+
+print(iris_summary)
+```
+
+## Mixed Workflow
+
+You can use both languages in the same presentation:
+
+1. Load data in R
+2. Analyze it with Python
+3. Visualize with either language
+
+This flexibility makes Quarto ideal for data science presentations!
+
+## Getting Started
+
+To render this presentation:
+
+```bash
+quarto render example-presentation.qmd
+```
+
+Or to preview with live reload:
+
+```bash
+quarto preview example-presentation.qmd
+```
+
+## Thank You!
+
+Questions?
+
+---
+
+**Resources:**
+
+- [Quarto Documentation](https://quarto.org)
+- [Quarto Presentations Guide](https://quarto.org/docs/presentations/)
