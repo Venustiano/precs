@@ -1,0 +1,12 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Computational reproducibility"
+  sidebar:
+    contents:
+      - slides/comprepds/comp_rep_ds.qmd
+
+format:
+  revealjs:
