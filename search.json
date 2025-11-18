@@ -1,0 +1,322 @@
+[
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#content",
+    "href": "slides/comprepds/comp_rep_ds.html#content",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Content",
+    "text": "Content\n\nProblem\nGoal\nTrials and errors\nBest solution so far\nLessons learned",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#problem",
+    "href": "slides/comprepds/comp_rep_ds.html#problem",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Problem",
+    "text": "Problem\n\nAudience with different background\nDifferent skills\nDifferent data\nThere is no one-size-fits-all solution",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#goal",
+    "href": "slides/comprepds/comp_rep_ds.html#goal",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Goal",
+    "text": "Goal\n\nEnable students to quickly reproduce and apply data-visualization techniques.\nHelp students efficiently learn and reproduce practical data-visualization workflows.\nTeach reproducible, practical data-visualization skills so students can focus on technique.",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#the-pillars-of-computational-reproducibility",
+    "href": "slides/comprepds/comp_rep_ds.html#the-pillars-of-computational-reproducibility",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "The Pillars of computational reproducibility",
+    "text": "The Pillars of computational reproducibility\n\nCode\nData\nEnvironment\nDocumentation\nWorkflows",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#spectrum-of-reproducibility",
+    "href": "slides/comprepds/comp_rep_ds.html#spectrum-of-reproducibility",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Spectrum of reproducibility",
+    "text": "Spectrum of reproducibility",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#capturing-computational-envionments",
+    "href": "slides/comprepds/comp_rep_ds.html#capturing-computational-envionments",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Capturing Computational Envionments",
+    "text": "Capturing Computational Envionments",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#first-docker-containers",
+    "href": "slides/comprepds/comp_rep_ds.html#first-docker-containers",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "First: docker containers",
+    "text": "First: docker containers",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#pre-built-environments",
+    "href": "slides/comprepds/comp_rep_ds.html#pre-built-environments",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Pre-built environments",
+    "text": "Pre-built environments\n\nJupyter stacks\nRocker",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#barriers-to-container-adoption",
+    "href": "slides/comprepds/comp_rep_ds.html#barriers-to-container-adoption",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Barriers to Container Adoption",
+    "text": "Barriers to Container Adoption\n\nDifficulties using the terminal\nNot enough time to teach container management\nNot enough storage space on their laptops\nNot enough permissions on their machine\nComputer setup language (Chinese)\nToo many processed running simultaneously",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#second-binder",
+    "href": "slides/comprepds/comp_rep_ds.html#second-binder",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Second: Binder",
+    "text": "Second: Binder\n\nLaunches Jupyter notebooks in the cloud\nNo local install needed\nShare reproducible environments\nGreat for teaching and demos\nFree, but limited resources",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#how-binder-works",
+    "href": "slides/comprepds/comp_rep_ds.html#how-binder-works",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "How Binder works",
+    "text": "How Binder works",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#main-barriers-running-binder",
+    "href": "slides/comprepds/comp_rep_ds.html#main-barriers-running-binder",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Main Barriers running binder",
+    "text": "Main Barriers running binder\n\nStarting the environment can be slow\nA few resources (2 GB in RAM)\nNo persistent storage",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#third-hpc-habrok",
+    "href": "slides/comprepds/comp_rep_ds.html#third-hpc-habrok",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Third: HPC (Habrok)",
+    "text": "Third: HPC (Habrok)\n\n10,000 + CPU cores\n100+ compute nodes\nHigh-speed InfiniBand network\nLarge memory nodes for demanding tasks\nGPU nodes for accelerated computing\nPetabytes of storage\nShared for research and education",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#challenges-using-hpc",
+    "href": "slides/comprepds/comp_rep_ds.html#challenges-using-hpc",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Challenges using HPC",
+    "text": "Challenges using HPC\n\nTerminal can be challenging\n\nFile management\n\nPort-forwarding\n\nSSH tunnel\n\nLoging into the HPC cluster",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#fourth-self-hosted-binder",
+    "href": "slides/comprepds/comp_rep_ds.html#fourth-self-hosted-binder",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Fourth: self hosted Binder",
+    "text": "Fourth: self hosted Binder\n\nSmall cluster (17 cores)\nLimited memory (2 GB)\n5G persistent storage",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#challenges",
+    "href": "slides/comprepds/comp_rep_ds.html#challenges",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Challenges",
+    "text": "Challenges\n\nMaintenance\nLimited resources\n\nHuman\nHardware",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#fifth-github-codespaces",
+    "href": "slides/comprepds/comp_rep_ds.html#fifth-github-codespaces",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Fifth: GitHub Codespaces",
+    "text": "Fifth: GitHub Codespaces\n\nCloud-based development environments\nRun VS Code and JupyterLab in your browser\nPre-configured for your project\nNo local setup needed\nCode, build, and test from anywhere\nGreat for collaboration and reproducibility",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#codespaces",
+    "href": "slides/comprepds/comp_rep_ds.html#codespaces",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Codespaces",
+    "text": "Codespaces",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#assignments",
+    "href": "slides/comprepds/comp_rep_ds.html#assignments",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Assignments",
+    "text": "Assignments",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#github-education-from-classroom-to-codespaces",
+    "href": "slides/comprepds/comp_rep_ds.html#github-education-from-classroom-to-codespaces",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "GitHub Education: From Classroom to Codespaces",
+    "text": "GitHub Education: From Classroom to Codespaces\n\nTeachers join GitHub Education for free resources\nSet up a Classroom to manage assignments\nUse official or custom templates for student projects\nStudents accept assignments, get their own repo\nCodespaces launches a ready-to-code environment for each student\nTeachers track progress, review code, and give feedback\nStreamlines reproducible, collaborative learning",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#lessons-learned",
+    "href": "slides/comprepds/comp_rep_ds.html#lessons-learned",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Lessons learned",
+    "text": "Lessons learned\n\nThe learning curve is high but benefits are good\nContainer play an important role creating the environments",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#why-use-codespaces-for-teaching-reproducibility",
+    "href": "slides/comprepds/comp_rep_ds.html#why-use-codespaces-for-teaching-reproducibility",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Why use Codespaces for teaching reproducibility?",
+    "text": "Why use Codespaces for teaching reproducibility?\n\nRemoves barriers related to hardware, permissions, and setup\nSaves time for instructors and students\nFacilitates reproducible workflows and collaborative learning",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#benefits-of-computational-reproducibility",
+    "href": "slides/comprepds/comp_rep_ds.html#benefits-of-computational-reproducibility",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Benefits of Computational Reproducibility",
+    "text": "Benefits of Computational Reproducibility\n\nIntegrity and Trust\nEfficiency and Reuse\nCollaboration and Transparency\nLong-term Preservation\nScalability and Generalization\nPolicy and Funding Compliance",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#tools-for-computational-reproducibility",
+    "href": "slides/comprepds/comp_rep_ds.html#tools-for-computational-reproducibility",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Tools for Computational Reproducibility",
+    "text": "Tools for Computational Reproducibility\n\nVersion control\nVirtualization\n\nContainers\nVirtual machines\nPackage managers\n\nData repositories\nNotebooks and literate programming\nCommunity standards",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#why-docker-containers",
+    "href": "slides/comprepds/comp_rep_ds.html#why-docker-containers",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Why docker containers?",
+    "text": "Why docker containers?\nCON:\nCosts time\nPRO:\nCan save you time",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#application-of-containers",
+    "href": "slides/comprepds/comp_rep_ds.html#application-of-containers",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Application of Containers",
+    "text": "Application of Containers\nContainers are widely used in:\n\nSoftware deployment and scaling\nReproducible research environments\nContinuous integration and testing\nCloud computing and microservices\nData science workflows",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#containers-and-dependency-hell",
+    "href": "slides/comprepds/comp_rep_ds.html#containers-and-dependency-hell",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Containers and Dependency Hell",
+    "text": "Containers and Dependency Hell\nContainers solve “dependency hell” by isolating software and its dependencies, preventing conflicts between packages and versions. This makes environments reproducible and easier to manage across systems.",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#r-example",
+    "href": "slides/comprepds/comp_rep_ds.html#r-example",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "R Example",
+    "text": "R Example",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#r-data-summary",
+    "href": "slides/comprepds/comp_rep_ds.html#r-data-summary",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "R Data Summary",
+    "text": "R Data Summary",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#mixed-workflow",
+    "href": "slides/comprepds/comp_rep_ds.html#mixed-workflow",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Mixed Workflow",
+    "text": "Mixed Workflow\nYou can use both languages in the same presentation:\n\nLoad data in R\nAnalyze it with Python\nVisualize with either language\n\nThis flexibility makes Quarto ideal for data science presentations!",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#getting-started",
+    "href": "slides/comprepds/comp_rep_ds.html#getting-started",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Getting Started",
+    "text": "Getting Started\nTo render this presentation:\nquarto render example-presentation.qmd\nOr to preview with live reload:\nquarto preview example-presentation.qmd",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#thank-you",
+    "href": "slides/comprepds/comp_rep_ds.html#thank-you",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Thank You!",
+    "text": "Thank You!\nQuestions?",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  }
+]
