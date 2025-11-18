@@ -44,4 +44,5 @@ jobs:
           # Optionally set publish_branch: gh-pages (default is gh-pages)
 
       - name: Log deployed URL
-        run: echo "Pages should be available at: https://Venustiano.github.io/precs/"
+        run: |
+          echo "Pages should be available at: https://Venustiano.github.io/precs/"
