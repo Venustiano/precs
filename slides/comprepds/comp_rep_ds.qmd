@@ -1,0 +1,306 @@
+---
+title: "Computational Reproducibility in Data Science"
+subtitle: "The Data Visualization use case"
+author: "Venustiano Soancatl Aguilar"
+format:
+  revealjs:
+    theme: dark
+    slide-number: true
+    chalkboard: true
+    # preview-links: auto
+---
+
+## Content
+
+- Problem
+- Goal
+- Trials and errors
+- Best solution so far
+- Lessons learned
+
+## Problem
+
+- Audience with different background
+- Different skills
+- Different data
+- There is no one-size-fits-all solution
+
+## Goal
+
+- Enable students to quickly reproduce and apply data-visualization techniques.
+- Help students efficiently learn and reproduce practical data-visualization workflows.
+- Teach reproducible, practical data-visualization skills so students can focus on technique.
+
+
+<!-- Computational reproducibility means that research results obtained through computation can be consistently `re-produced` by others  given the same inputs and methods.  -->
+
+
+
+## The Pillars of computational reproducibility
+
+- Code
+- Data
+- `Environment`
+- Documentation
+- Workflows
+
+## Spectrum of reproducibility
+
+
+![](./images/reproducible-matrix.jpg){ width=800px target="https://book.the-turing-way.org/reproducible-research/overview/overview-definitions/#rr-overview-definitions-reproducibility" }
+
+
+## 
+
+<iframe src="https://clauswilke.com/dataviz/" width="1200" height="600"></iframe>
+
+
+## Capturing Computational Envionments
+
+![](/images/computational-enviro.png){ width=800px target="https://book.the-turing-way.org/reproducible-research/renv/renv-options/"}
+
+
+## First: docker containers
+
+::: {.columns}
+::: {.column width="50%"}
+![](/images/container-what-is-container.png){ width=100% target="https://www.docker.com/app/uploads/2021/11/container-what-is-container-1110x961.png"}
+:::
+::: {.column width="50%"}
+![](/images/Docker-today.png){ width=100% target="https://www.docker.com/app/uploads/2021/11/Docker-Website-2018-Diagrams-071918-V5_26_Docker-today-1110x919.png"}
+:::
+:::
+
+## Pre-built environments
+
+- Jupyter stacks
+- Rocker
+
+## Barriers to Container Adoption
+
+- Difficulties using the terminal
+- Not enough time to teach `container management`
+- Not enough `storage space` on their laptops
+- Not enough permissions on their machine
+- Computer setup language (Chinese)
+- Too many processed running simultaneously
+
+## Second: Binder
+
+- Launches Jupyter notebooks in the cloud
+- No local install needed
+- Share reproducible environments
+- Great for teaching and demos
+- Free, but limited resources
+
+## How Binder works
+
+::: center
+![](/images/binder-comic.png){ width=800px fig-align="center" target="https://book.the-turing-way.org/communication/binder/"}
+:::
+
+## Main Barriers running binder
+
+- Starting the environment can be slow
+- A few resources (2 GB in RAM)
+- No persistent storage
+- 
+
+## Third: HPC (Habrok)
+
+
+ - `10,000` + CPU cores
+ - 100+ compute nodes
+ - High-speed InfiniBand network
+ - Large memory nodes for demanding tasks
+ - GPU nodes for accelerated computing
+ - Petabytes of storage
+ - Shared for research and education
+
+
+## Challenges using HPC
+
+- Terminal can be challenging
+  - File management
+- Port-forwarding
+  - SSH tunnel
+- Loging into the HPC cluster
+
+## Fourth: self hosted Binder
+
+- Small cluster (17 cores)
+- Limited memory (2 GB)
+- 5G persistent storage
+
+
+## Challenges
+
+- Maintenance
+- Limited resources
+  - Human
+  - Hardware
+
+## Fifth: GitHub Codespaces
+
+- Cloud-based development environments
+- Run `VS Code` and `JupyterLab` in your browser
+- Pre-configured for your project
+- No local setup needed
+- Code, build, and test from anywhere
+- Great for collaboration and reproducibility
+
+## Codespaces
+
+![](./images/configuration-as-code.webp){ fig-align="center" target="https://www.analyticsvidhya.com/blog/2025/05/github-codespaces/"}
+
+## Assignments
+
+![](./images/github-classroom-assignments.png){ width=550px fig-align="center" target="https://teachdatascience.com/gitclass/"}
+
+## GitHub Education: From Classroom to Codespaces
+
+- Teachers join GitHub Education for free resources
+- Set up a Classroom to manage assignments
+- Use official or custom templates for student projects
+- Students accept assignments, get their own repo
+- Codespaces launches a ready-to-code environment for each student
+- Teachers track progress, review code, and give feedback
+- Streamlines reproducible, collaborative learning
+
+## Lessons learned
+- The learning curve is high but benefits are good
+- Container play an important role creating the environments
+
+## Why use Codespaces for teaching reproducibility?
+
+- Removes barriers related to hardware, permissions, and setup
+- Saves time for instructors and students
+- Facilitates reproducible workflows and collaborative learning
+
+<!-- ## The Challenges
+
+- Software rot
+- Data availability
+- Complexity
+- Human factors -->
+
+## Benefits of Computational Reproducibility
+
+1. Integrity and Trust
+2. `Efficiency and Reuse`
+3. Collaboration and Transparency
+4. `Long-term` Preservation
+5. Scalability and Generalization
+6. Policy and Funding Compliance
+
+
+
+
+
+## Tools for Computational Reproducibility {.smaller}
+
+- Version control
+- Virtualization
+  - `Containers`
+  - Virtual machines
+  - Package managers
+- Data repositories
+- Notebooks and literate programming
+- Community standards
+
+
+
+
+
+## Why docker containers?
+
+CON:
+
+`Costs time`
+
+PRO:
+
+`Can save you time`
+
+## Application of Containers
+
+Containers are widely used in:
+
+- Software deployment and scaling
+- Reproducible research environments
+- Continuous integration and testing
+- Cloud computing and microservices
+- Data science workflows
+
+## Containers and Dependency Hell
+
+Containers solve "dependency hell" by isolating software and its dependencies, preventing conflicts between packages and versions. This makes environments reproducible and easier to manage across systems.
+
+
+
+## R Example
+
+<!-- ```{r}
+#| echo: true
+library(ggplot2)
+
+# Create sample data
+data <- data.frame(
+  x = 1:10,
+  y = rnorm(10)
+)
+
+# Create plot
+ggplot(data, aes(x = x, y = y)) +
+  geom_line(color = "blue", size = 1) +
+  geom_point(color = "red", size = 3) +
+  theme_minimal() +
+  labs(title = "Random Data Plot", x = "Index", y = "Value")
+``` -->
+
+## R Data Summary
+
+<!-- ```{r}
+#| echo: true
+# Create sample dataset
+iris_summary <- iris |>
+  subset(Species == "setosa") |>
+  summary()
+
+print(iris_summary)
+``` -->
+
+## Mixed Workflow
+
+You can use both languages in the same presentation:
+
+1. Load data in R
+2. Analyze it with Python
+3. Visualize with either language
+
+This flexibility makes Quarto ideal for data science presentations!
+
+## Getting Started
+
+To render this presentation:
+
+```bash
+quarto render example-presentation.qmd
+```
+
+Or to preview with live reload:
+
+```bash
+quarto preview example-presentation.qmd
+```
+
+## Thank You!
+
+Questions?
+
+---
+
+**Resources:**
+
+- [Quarto Documentation](https://quarto.org)
+- [Quarto Presentations Guide](https://quarto.org/docs/presentations/)
