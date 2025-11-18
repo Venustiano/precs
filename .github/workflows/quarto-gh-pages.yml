@@ -1,0 +1,47 @@
+name: Render Quarto slides and deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  render-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Quarto CLI
+        run: |
+          # Download and install latest Quarto Linux package
+          wget -q https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.deb -O quarto.deb
+          sudo dpkg -i quarto.deb || sudo apt-get -f install -y
+
+      - name: Render slides with Quarto
+        # Render the specific slides file to a 'public' folder for Pages
+        run: |
+          mkdir -p public
+          quarto render slides/comprepds/comp_rep_ds.qmd --to revealjs --output-dir public
+          # If you have multiple slides or a site, you can render the whole repo:
+          # quarto render --to revealjs --output-dir public
+
+      - name: Setup Git for gh-pages commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy to GitHub Pages (gh-pages)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          # Optionally set publish_branch: gh-pages (default is gh-pages)
+
+      - name: Log deployed URL
+        run: echo "Pages should be available at: https://Venustiano.github.io/precs/"
