@@ -7,7 +7,6 @@ format:
     theme: dark
     slide-number: true
     chalkboard: true
-    self-contained: true
     # preview-links: auto
 ---
 
@@ -68,7 +67,7 @@ format:
 ![](./images/container-what-is-container.png){ width=100% target="https://www.docker.com/app/uploads/2021/11/container-what-is-container-1110x961.png"}
 :::
 ::: {.column width="50%"}
-![](/images/Docker-today.png){ width=100% target="https://www.docker.com/app/uploads/2021/11/Docker-Website-2018-Diagrams-071918-V5_26_Docker-today-1110x919.png"}
+![](./images/Docker-today.png){ width=100% target="https://www.docker.com/app/uploads/2021/11/Docker-Website-2018-Diagrams-071918-V5_26_Docker-today-1110x919.png"}
 :::
 :::
 
@@ -103,9 +102,8 @@ format:
 ## Main Barriers running binder
 
 - Starting the environment can be slow
-- A few resources (2 GB in RAM)
+- Few resources (2 GB in RAM)
 - No persistent storage
-- 
 
 ## Third: HPC (Habrok)
 
@@ -160,7 +158,7 @@ format:
 
 ## GitHub Education: From Classroom to Codespaces
 
-- Teachers join GitHub Education for free resources
+- Teachers join GitHub Education for `free resources`
 - Set up a Classroom to manage assignments
 - Use official or custom templates for student projects
 - Students accept assignments, get their own repo
@@ -168,22 +166,24 @@ format:
 - Teachers track progress, review code, and give feedback
 - Streamlines reproducible, collaborative learning
 
+## Are GitHub codespaces good enough?
+
+- Are good, but not enough
+- Serve the Data Visualization env via an HPC GUI
+
+
 ## Lessons learned
-- The learning curve is high but benefits are good
-- Container play an important role creating the environments
 
-## Why use Codespaces for teaching reproducibility?
+- The learning curve is high but `benefits are remarkable`
+- Containerization plays an important role creating the environments
+- `Always prepare an alternative`
+- There is no system `100%` stable
 
-- Removes barriers related to hardware, permissions, and setup
-- Saves time for instructors and students
-- Facilitates reproducible workflows and collaborative learning
 
-<!-- ## The Challenges
+## Git failures
 
-- Software rot
-- Data availability
-- Complexity
-- Human factors -->
+![](./images/git-operation_failures.png)
+
 
 ## Benefits of Computational Reproducibility
 
@@ -195,113 +195,6 @@ format:
 6. Policy and Funding Compliance
 
 
+**Thank You!**
 
 
-
-## Tools for Computational Reproducibility {.smaller}
-
-- Version control
-- Virtualization
-  - `Containers`
-  - Virtual machines
-  - Package managers
-- Data repositories
-- Notebooks and literate programming
-- Community standards
-
-
-
-
-
-## Why docker containers?
-
-CON:
-
-`Costs time`
-
-PRO:
-
-`Can save you time`
-
-## Application of Containers
-
-Containers are widely used in:
-
-- Software deployment and scaling
-- Reproducible research environments
-- Continuous integration and testing
-- Cloud computing and microservices
-- Data science workflows
-
-## Containers and Dependency Hell
-
-Containers solve "dependency hell" by isolating software and its dependencies, preventing conflicts between packages and versions. This makes environments reproducible and easier to manage across systems.
-
-
-
-## R Example
-
-<!-- ```{r}
-#| echo: true
-library(ggplot2)
-
-# Create sample data
-data <- data.frame(
-  x = 1:10,
-  y = rnorm(10)
-)
-
-# Create plot
-ggplot(data, aes(x = x, y = y)) +
-  geom_line(color = "blue", size = 1) +
-  geom_point(color = "red", size = 3) +
-  theme_minimal() +
-  labs(title = "Random Data Plot", x = "Index", y = "Value")
-``` -->
-
-## R Data Summary
-
-<!-- ```{r}
-#| echo: true
-# Create sample dataset
-iris_summary <- iris |>
-  subset(Species == "setosa") |>
-  summary()
-
-print(iris_summary)
-``` -->
-
-## Mixed Workflow
-
-You can use both languages in the same presentation:
-
-1. Load data in R
-2. Analyze it with Python
-3. Visualize with either language
-
-This flexibility makes Quarto ideal for data science presentations!
-
-## Getting Started
-
-To render this presentation:
-
-```bash
-quarto render example-presentation.qmd
-```
-
-Or to preview with live reload:
-
-```bash
-quarto preview example-presentation.qmd
-```
-
-## Thank You!
-
-Questions?
-
----
-
-**Resources:**
-
-- [Quarto Documentation](https://quarto.org)
-- [Quarto Presentations Guide](https://quarto.org/docs/presentations/)
