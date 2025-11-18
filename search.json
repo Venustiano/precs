@@ -114,7 +114,7 @@
     "href": "slides/comprepds/comp_rep_ds.html#main-barriers-running-binder",
     "title": "Computational Reproducibility in Data Science",
     "section": "Main Barriers running binder",
-    "text": "Main Barriers running binder\n\nStarting the environment can be slow\nA few resources (2 GB in RAM)\nNo persistent storage",
+    "text": "Main Barriers running binder\n\nStarting the environment can be slow\nFew resources (2 GB in RAM)\nNo persistent storage",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
@@ -200,21 +200,31 @@
     ]
   },
   {
-    "objectID": "slides/comprepds/comp_rep_ds.html#lessons-learned",
-    "href": "slides/comprepds/comp_rep_ds.html#lessons-learned",
+    "objectID": "slides/comprepds/comp_rep_ds.html#are-github-codespaces-good-enough",
+    "href": "slides/comprepds/comp_rep_ds.html#are-github-codespaces-good-enough",
     "title": "Computational Reproducibility in Data Science",
-    "section": "Lessons learned",
-    "text": "Lessons learned\n\nThe learning curve is high but benefits are good\nContainer play an important role creating the environments",
+    "section": "Are GitHub codespaces good enough?",
+    "text": "Are GitHub codespaces good enough?\n\nAre good, but not enough\nServe the Data Visualization env via an HPC GUI",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
   },
   {
-    "objectID": "slides/comprepds/comp_rep_ds.html#why-use-codespaces-for-teaching-reproducibility",
-    "href": "slides/comprepds/comp_rep_ds.html#why-use-codespaces-for-teaching-reproducibility",
+    "objectID": "slides/comprepds/comp_rep_ds.html#lessons-learned",
+    "href": "slides/comprepds/comp_rep_ds.html#lessons-learned",
     "title": "Computational Reproducibility in Data Science",
-    "section": "Why use Codespaces for teaching reproducibility?",
-    "text": "Why use Codespaces for teaching reproducibility?\n\nRemoves barriers related to hardware, permissions, and setup\nSaves time for instructors and students\nFacilitates reproducible workflows and collaborative learning",
+    "section": "Lessons learned",
+    "text": "Lessons learned\n\nThe learning curve is high but benefits are remarkable\nContainerization plays an important role creating the environments\nAlways prepare an alternative\nThere is no system 100% stable",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#git-failures",
+    "href": "slides/comprepds/comp_rep_ds.html#git-failures",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Git failures",
+    "text": "Git failures",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
@@ -224,97 +234,7 @@
     "href": "slides/comprepds/comp_rep_ds.html#benefits-of-computational-reproducibility",
     "title": "Computational Reproducibility in Data Science",
     "section": "Benefits of Computational Reproducibility",
-    "text": "Benefits of Computational Reproducibility\n\nIntegrity and Trust\nEfficiency and Reuse\nCollaboration and Transparency\nLong-term Preservation\nScalability and Generalization\nPolicy and Funding Compliance",
-    "crumbs": [
-      "Computational Reproducibility in Data Science"
-    ]
-  },
-  {
-    "objectID": "slides/comprepds/comp_rep_ds.html#tools-for-computational-reproducibility",
-    "href": "slides/comprepds/comp_rep_ds.html#tools-for-computational-reproducibility",
-    "title": "Computational Reproducibility in Data Science",
-    "section": "Tools for Computational Reproducibility",
-    "text": "Tools for Computational Reproducibility\n\nVersion control\nVirtualization\n\nContainers\nVirtual machines\nPackage managers\n\nData repositories\nNotebooks and literate programming\nCommunity standards",
-    "crumbs": [
-      "Computational Reproducibility in Data Science"
-    ]
-  },
-  {
-    "objectID": "slides/comprepds/comp_rep_ds.html#why-docker-containers",
-    "href": "slides/comprepds/comp_rep_ds.html#why-docker-containers",
-    "title": "Computational Reproducibility in Data Science",
-    "section": "Why docker containers?",
-    "text": "Why docker containers?\nCON:\nCosts time\nPRO:\nCan save you time",
-    "crumbs": [
-      "Computational Reproducibility in Data Science"
-    ]
-  },
-  {
-    "objectID": "slides/comprepds/comp_rep_ds.html#application-of-containers",
-    "href": "slides/comprepds/comp_rep_ds.html#application-of-containers",
-    "title": "Computational Reproducibility in Data Science",
-    "section": "Application of Containers",
-    "text": "Application of Containers\nContainers are widely used in:\n\nSoftware deployment and scaling\nReproducible research environments\nContinuous integration and testing\nCloud computing and microservices\nData science workflows",
-    "crumbs": [
-      "Computational Reproducibility in Data Science"
-    ]
-  },
-  {
-    "objectID": "slides/comprepds/comp_rep_ds.html#containers-and-dependency-hell",
-    "href": "slides/comprepds/comp_rep_ds.html#containers-and-dependency-hell",
-    "title": "Computational Reproducibility in Data Science",
-    "section": "Containers and Dependency Hell",
-    "text": "Containers and Dependency Hell\nContainers solve “dependency hell” by isolating software and its dependencies, preventing conflicts between packages and versions. This makes environments reproducible and easier to manage across systems.",
-    "crumbs": [
-      "Computational Reproducibility in Data Science"
-    ]
-  },
-  {
-    "objectID": "slides/comprepds/comp_rep_ds.html#r-example",
-    "href": "slides/comprepds/comp_rep_ds.html#r-example",
-    "title": "Computational Reproducibility in Data Science",
-    "section": "R Example",
-    "text": "R Example",
-    "crumbs": [
-      "Computational Reproducibility in Data Science"
-    ]
-  },
-  {
-    "objectID": "slides/comprepds/comp_rep_ds.html#r-data-summary",
-    "href": "slides/comprepds/comp_rep_ds.html#r-data-summary",
-    "title": "Computational Reproducibility in Data Science",
-    "section": "R Data Summary",
-    "text": "R Data Summary",
-    "crumbs": [
-      "Computational Reproducibility in Data Science"
-    ]
-  },
-  {
-    "objectID": "slides/comprepds/comp_rep_ds.html#mixed-workflow",
-    "href": "slides/comprepds/comp_rep_ds.html#mixed-workflow",
-    "title": "Computational Reproducibility in Data Science",
-    "section": "Mixed Workflow",
-    "text": "Mixed Workflow\nYou can use both languages in the same presentation:\n\nLoad data in R\nAnalyze it with Python\nVisualize with either language\n\nThis flexibility makes Quarto ideal for data science presentations!",
-    "crumbs": [
-      "Computational Reproducibility in Data Science"
-    ]
-  },
-  {
-    "objectID": "slides/comprepds/comp_rep_ds.html#getting-started",
-    "href": "slides/comprepds/comp_rep_ds.html#getting-started",
-    "title": "Computational Reproducibility in Data Science",
-    "section": "Getting Started",
-    "text": "Getting Started\nTo render this presentation:\nquarto render example-presentation.qmd\nOr to preview with live reload:\nquarto preview example-presentation.qmd",
-    "crumbs": [
-      "Computational Reproducibility in Data Science"
-    ]
-  },
-  {
-    "objectID": "slides/comprepds/comp_rep_ds.html#thank-you",
-    "href": "slides/comprepds/comp_rep_ds.html#thank-you",
-    "title": "Computational Reproducibility in Data Science",
-    "section": "Thank You!",
-    "text": "Thank You!\nQuestions?",
+    "text": "Benefits of Computational Reproducibility\n\nIntegrity and Trust\nEfficiency and Reuse\nCollaboration and Transparency\nLong-term Preservation\nScalability and Generalization\nPolicy and Funding Compliance\n\nThank You!",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
