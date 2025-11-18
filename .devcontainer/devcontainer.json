@@ -41,11 +41,7 @@
     }
   },
 
-  "containerEnv": {
-    "RETICULATE_PYTHON": "/usr/local/python/current/bin/python"
-  },
-
-  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postCreateCommand": "bash .devcontainer/setup.sh && Rscript -e \"if (!requireNamespace('reticulate', quietly=TRUE)) install.packages('reticulate', repos='https://cloud.r-project.org/'); reticulate::py_install('matplotlib', pip = TRUE)\"",
 
   "remoteUser": "vscode"
 }

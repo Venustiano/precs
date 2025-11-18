@@ -1,7 +1,7 @@
 ---
-title: "Sample Quarto Presentation"
+title: "Computational Reproducibility in Data Science"
 subtitle: "With Python and R Code Examples"
-author: "Your Name"
+author: "Venustiano Soancatl Aguilar"
 format:
   revealjs:
     theme: dark
@@ -10,52 +10,36 @@ format:
     preview-links: auto
 ---
 
-## Introduction
+## Goal
 
-This is a sample Quarto presentation demonstrating:
+Computational reproducibility means that research results obtained through computation can be consistently `re-produced` by others  given the same inputs and methods. 
 
-- Python code execution
-- R code execution
-- Mixed language support
 
-## Python Example
 
-```{python}
-#| echo: true
-import matplotlib.pyplot as plt
-import numpy as np
+## The Pillars
 
-# Generate data
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
+- Code
+- Data
+- `Environment`
+- Documentation
+- Workflows
 
-# Create plot
-plt.figure(figsize=(8, 4))
-plt.plot(x, y, 'b-', linewidth=2)
-plt.title('Sine Wave')
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.grid(True)
-plt.show()
-```
+## The Challenges
 
-## Python Data Analysis
+- Software rot
+- Data availability
+- Complexity
+- Human factors
 
-```{python}
-#| echo: true
-import pandas as pd
+## Benefits of Computational Reproducibility
 
-# Create sample data
-data = {
-    'Name': ['Alice', 'Bob', 'Charlie', 'David'],
-    'Score': [85, 92, 78, 95],
-    'Grade': ['B', 'A', 'C', 'A']
-}
+1. Integrity and Trust
+2. `Efficiency and Reuse`
+3. Collaboration and Transparency
+4. `Long-term` Preservation
+5. Scalability and Generalization
+6. Policy and Funding Compliance
 
-df = pd.DataFrame(data)
-print(df)
-print(f"\nAverage Score: {df['Score'].mean():.2f}")
-```
 
 ## R Example
 

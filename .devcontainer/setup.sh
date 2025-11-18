@@ -13,7 +13,7 @@ pip install --upgrade pip
 pip install \
     jupyter \
     matplotlib \
-    numpy \
+    numpy \    Rscript -e 'if (!requireNamespace("reticulate", quietly = TRUE)) install.packages("reticulate", repos = "https://cloud.r-project.org/"); reticulate::py_install("matplotlib", pip = TRUE)'    Rscript -e 'if (!requireNamespace("reticulate", quietly = TRUE)) install.packages("reticulate", repos = "https://cloud.r-project.org/"); reticulate::py_install("matplotlib", pip = TRUE)'
     pandas \
     seaborn \
     plotly \

@@ -7,7 +7,7 @@ format:
     theme: dark
     slide-number: true
     chalkboard: true
-    preview-links: auto
+    # preview-links: auto
 ---
 
 ## Content
@@ -16,6 +16,7 @@ format:
 - Goal
 - Trials and errors
 - Best solution so far
+- Lessons learned
 
 ## Problem
 
@@ -59,17 +60,122 @@ format:
 ![](/images/computational-enviro.png){ width=800px target="https://book.the-turing-way.org/reproducible-research/renv/renv-options/"}
 
 
-## First attempt (docker containers)
+## First: docker containers
 
-## Second attempt (Binder)
+::: {.columns}
+::: {.column width="50%"}
+![](/images/container-what-is-container.png){ width=100% target="https://www.docker.com/app/uploads/2021/11/container-what-is-container-1110x961.png"}
+:::
+::: {.column width="50%"}
+![](/images/Docker-today.png){ width=100% target="https://www.docker.com/app/uploads/2021/11/Docker-Website-2018-Diagrams-071918-V5_26_Docker-today-1110x919.png"}
+:::
+:::
 
-## Third attempt (HPC)
+## Pre-built environments
 
-## Fourth attempt (Public and Locally hosted Binder)
+- Jupyter stacks
+- Rocker
 
-## Github Codespaces
+## Barriers to Container Adoption
+
+- Difficulties using the terminal
+- Not enough time to teach `container management`
+- Not enough `storage space` on their laptops
+- Not enough permissions on their machine
+- Computer setup language (Chinese)
+- Too many processed running simultaneously
+
+## Second: Binder
+
+- Launches Jupyter notebooks in the cloud
+- No local install needed
+- Share reproducible environments
+- Great for teaching and demos
+- Free, but limited resources
+
+## How Binder works
+
+::: center
+![](/images/binder-comic.png){ width=800px fig-align="center" target="https://book.the-turing-way.org/communication/binder/"}
+:::
+
+## Main Barriers running binder
+
+- Starting the environment can be slow
+- A few resources (2 GB in RAM)
+- No persistent storage
+- 
+
+## Third: HPC (Habrok)
 
 
+ - `10,000` + CPU cores
+ - 100+ compute nodes
+ - High-speed InfiniBand network
+ - Large memory nodes for demanding tasks
+ - GPU nodes for accelerated computing
+ - Petabytes of storage
+ - Shared for research and education
+
+
+## Challenges using HPC
+
+- Terminal can be challenging
+  - File management
+- Port-forwarding
+  - SSH tunnel
+- Loging into the HPC cluster
+
+## Fourth: self hosted Binder
+
+- Small cluster (17 cores)
+- Limited memory (2 GB)
+- 5G persistent storage
+
+
+## Challenges
+
+- Maintenance
+- Limited resources
+  - Human
+  - Hardware
+
+## Fifth: GitHub Codespaces
+
+- Cloud-based development environments
+- Run `VS Code` and `JupyterLab` in your browser
+- Pre-configured for your project
+- No local setup needed
+- Code, build, and test from anywhere
+- Great for collaboration and reproducibility
+
+## Codespaces
+
+![](./images/configuration-as-code.webp){ fig-align="center" target="https://www.analyticsvidhya.com/blog/2025/05/github-codespaces/"}
+
+## Assignments
+
+![](./images/github-classroom-assignments.png){ width=550px fig-align="center" target="https://teachdatascience.com/gitclass/"}
+
+## GitHub Education: From Classroom to Codespaces
+
+- Teachers join GitHub Education for free resources
+- Set up a Classroom to manage assignments
+- Use official or custom templates for student projects
+- Students accept assignments, get their own repo
+- Codespaces launches a ready-to-code environment for each student
+- Teachers track progress, review code, and give feedback
+- Streamlines reproducible, collaborative learning
+
+## Lessons learned
+- The learning curve is high but benefits are good
+- Container play an important role creating the environments
+
+## Why use Codespaces for teaching reproducibility?
+
+- Removes barriers related to hardware, permissions, and setup
+- Saves time for instructors and students
+- Facilitates reproducible workflows and collaborative learning
 
 <!-- ## The Challenges
 
@@ -134,7 +240,7 @@ Containers solve "dependency hell" by isolating software and its dependencies, p
 
 ## R Example
 
-```{r}
+<!-- ```{r}
 #| echo: true
 library(ggplot2)
 
@@ -150,11 +256,11 @@ ggplot(data, aes(x = x, y = y)) +
   geom_point(color = "red", size = 3) +
   theme_minimal() +
   labs(title = "Random Data Plot", x = "Index", y = "Value")
-```
+``` -->
 
 ## R Data Summary
 
-```{r}
+<!-- ```{r}
 #| echo: true
 # Create sample dataset
 iris_summary <- iris |>
@@ -162,7 +268,7 @@ iris_summary <- iris |>
   summary()
 
 print(iris_summary)
-```
+``` -->
 
 ## Mixed Workflow
 
