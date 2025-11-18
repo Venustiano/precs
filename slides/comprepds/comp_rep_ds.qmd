@@ -58,14 +58,14 @@ format:
 
 ## Capturing Computational Envionments
 
-![](/images/computational-enviro.png){ width=800px target="https://book.the-turing-way.org/reproducible-research/renv/renv-options/"}
+![](./images/computational-enviro.png){ width=800px target="https://book.the-turing-way.org/reproducible-research/renv/renv-options/"}
 
 
 ## First: docker containers
 
 ::: {.columns}
 ::: {.column width="50%"}
-![](/images/container-what-is-container.png){ width=100% target="https://www.docker.com/app/uploads/2021/11/container-what-is-container-1110x961.png"}
+![](./images/container-what-is-container.png){ width=100% target="https://www.docker.com/app/uploads/2021/11/container-what-is-container-1110x961.png"}
 :::
 ::: {.column width="50%"}
 ![](/images/Docker-today.png){ width=100% target="https://www.docker.com/app/uploads/2021/11/Docker-Website-2018-Diagrams-071918-V5_26_Docker-today-1110x919.png"}
@@ -97,7 +97,7 @@ format:
 ## How Binder works
 
 ::: center
-![](/images/binder-comic.png){ width=800px fig-align="center" target="https://book.the-turing-way.org/communication/binder/"}
+![](./images/binder-comic.png){ width=800px fig-align="center" target="https://book.the-turing-way.org/communication/binder/"}
 :::
 
 ## Main Barriers running binder
