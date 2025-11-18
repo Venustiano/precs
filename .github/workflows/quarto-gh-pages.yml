@@ -17,8 +17,18 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Setup Quarto
-        uses: quarto-dev/quarto-actions/setup-quarto@v2
+      - name: Install Quarto CLI (pinned)
+        env:
+          QUARTO_VERSION: "1.8.25"   # <-- change this to the Quarto version you want, e.g. "1.5.0" or "latest-known"
+        run: |
+          echo "Installing Quarto CLI v${QUARTO_VERSION}"
+          ARCH=linux-amd64
+          FILE=quarto-${QUARTO_VERSION}-${ARCH}.deb
+          URL="https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/${FILE}"
+          echo "Downloading $URL"
+          wget -q --show-progress "$URL" -O "/tmp/${FILE}"
+          sudo dpkg -i "/tmp/${FILE}" || (sudo apt-get update && sudo apt-get -f install -y && sudo dpkg -i "/tmp/${FILE}")
+          quarto --version
 
       - name: Render slides with Quarto
         # Render the specific slides file to a 'public' folder for Pages
