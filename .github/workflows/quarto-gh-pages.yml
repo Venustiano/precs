@@ -31,13 +31,14 @@ jobs:
           sudo dpkg -i "/tmp/${FILE}" || (sudo apt-get update && sudo apt-get -f install -y && sudo dpkg -i "/tmp/${FILE}")
           quarto --version
 
-      - name: Render slides with Quarto
-        # Render the specific slides file to a 'public' folder for Pages
+      - name: Render Quarto site
         run: |
-          mkdir -p public
-          quarto render slides/comprepds/comp_rep_ds.qmd --to revealjs --output-dir public
-          # If you have multiple slides or a site, you can render the whole repo:
-          # quarto render --to revealjs --output-dir public
+          # If your repository is a Quarto site, render the whole site into _site
+          mkdir -p _site
+          # quarto render --output-dir _site
+          # If you only render one file you can do:
+          quarto render slides/comprepds/comp_rep_ds.qmd --to revealjs --output-dir _site
+          ls -la _site
 
       - name: Setup Git for gh-pages commit
         run: |
@@ -48,9 +49,13 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./_site
           # Optionally set publish_branch: gh-pages (default is gh-pages)
 
-      - name: Log deployed URL
+      - name: Show expected Pages URL
         run: |
-          echo "Pages should be available at: https://Venustiano.github.io/precs/"
+          owner="${{ github.repository_owner }}"
+          repo_full="${{ github.repository }}"
+          repo="${repo_full#*/}"
+          owner_lower=$(echo "$owner" | tr '[:upper:]' '[:lower:]')
+          echo "Expected Pages URL: https://${owner_lower}.github.io/${repo}/"
