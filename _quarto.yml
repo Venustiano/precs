@@ -10,3 +10,6 @@ website:
 
 format:
   revealjs:
+    theme: dark
+    slide-number: true
+    chalkboard: true
