@@ -14,7 +14,7 @@
     "href": "slides/comprepds/comp_rep_ds.html#problem",
     "title": "Computational Reproducibility in Data Science",
     "section": "Problem",
-    "text": "Problem\n\nAudience with different background\nDifferent skills\nDifferent data\nThere is no one-size-fits-all solution",
+    "text": "Problem\n\nAudience with different background and skills\nDifferent data\nDifferent hardware\nDifferent operating systems\nThere is no one-size-fits-all solution",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
@@ -24,7 +24,17 @@
     "href": "slides/comprepds/comp_rep_ds.html#goal",
     "title": "Computational Reproducibility in Data Science",
     "section": "Goal",
-    "text": "Goal\n\nEnable students to quickly reproduce and apply data-visualization techniques.\nHelp students efficiently learn and reproduce practical data-visualization workflows.\nTeach reproducible, practical data-visualization skills so students can focus on technique.",
+    "text": "Goal\n\nHelp students efficiently learn and reproduce practical data-visualization workflows.\nKeep a good balance between theory and practice.",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#reproducibility-matrix",
+    "href": "slides/comprepds/comp_rep_ds.html#reproducibility-matrix",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Reproducibility matrix",
+    "text": "Reproducibility matrix",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
@@ -40,11 +50,11 @@
     ]
   },
   {
-    "objectID": "slides/comprepds/comp_rep_ds.html#spectrum-of-reproducibility",
-    "href": "slides/comprepds/comp_rep_ds.html#spectrum-of-reproducibility",
+    "objectID": "slides/comprepds/comp_rep_ds.html#section",
+    "href": "slides/comprepds/comp_rep_ds.html#section",
     "title": "Computational Reproducibility in Data Science",
-    "section": "Spectrum of reproducibility",
-    "text": "Spectrum of reproducibility",
+    "section": "",
+    "text": "Peng 2011",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
@@ -60,11 +70,11 @@
     ]
   },
   {
-    "objectID": "slides/comprepds/comp_rep_ds.html#first-docker-containers",
-    "href": "slides/comprepds/comp_rep_ds.html#first-docker-containers",
+    "objectID": "slides/comprepds/comp_rep_ds.html#first-approach-docker-containers",
+    "href": "slides/comprepds/comp_rep_ds.html#first-approach-docker-containers",
     "title": "Computational Reproducibility in Data Science",
-    "section": "First: docker containers",
-    "text": "First: docker containers",
+    "section": "First approach: docker containers",
+    "text": "First approach: docker containers",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
@@ -74,27 +84,37 @@
     "href": "slides/comprepds/comp_rep_ds.html#pre-built-environments",
     "title": "Computational Reproducibility in Data Science",
     "section": "Pre-built environments",
-    "text": "Pre-built environments\n\nJupyter stacks\nRocker",
+    "text": "Pre-built environments\nTwo repositories including a great variety of python and R packages:\n\nJupyter stacks\nRocker project\n\n\n\nAdditional R and Python packages\nLaTeX",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
   },
   {
-    "objectID": "slides/comprepds/comp_rep_ds.html#barriers-to-container-adoption",
-    "href": "slides/comprepds/comp_rep_ds.html#barriers-to-container-adoption",
+    "objectID": "slides/comprepds/comp_rep_ds.html#instructions-for-the-students",
+    "href": "slides/comprepds/comp_rep_ds.html#instructions-for-the-students",
     "title": "Computational Reproducibility in Data Science",
-    "section": "Barriers to Container Adoption",
-    "text": "Barriers to Container Adoption\n\nDifficulties using the terminal\nNot enough time to teach container management\nNot enough storage space on their laptops\nNot enough permissions on their machine\nComputer setup language (Chinese)\nToo many processed running simultaneously",
+    "section": "Instructions for the students",
+    "text": "Instructions for the students\n\nInstall Docker\nRun the Hello world example",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
   },
   {
-    "objectID": "slides/comprepds/comp_rep_ds.html#second-binder",
-    "href": "slides/comprepds/comp_rep_ds.html#second-binder",
+    "objectID": "slides/comprepds/comp_rep_ds.html#some-difficulties-of-the-container-approach",
+    "href": "slides/comprepds/comp_rep_ds.html#some-difficulties-of-the-container-approach",
     "title": "Computational Reproducibility in Data Science",
-    "section": "Second: Binder",
-    "text": "Second: Binder\n\nLaunches Jupyter notebooks in the cloud\nNo local install needed\nShare reproducible environments\nGreat for teaching and demos\nFree, but limited resources",
+    "section": "Some difficulties of the container approach",
+    "text": "Some difficulties of the container approach\n\nDifficulties using the terminal\nNot enough time to teach container management\nNot enough storage space on their laptops\nNot enough permissions on their machine\nComputer setup language (e. g. Chinese)\nToo many processed running simultaneously",
+    "crumbs": [
+      "Computational Reproducibility in Data Science"
+    ]
+  },
+  {
+    "objectID": "slides/comprepds/comp_rep_ds.html#second-approach-binder",
+    "href": "slides/comprepds/comp_rep_ds.html#second-approach-binder",
+    "title": "Computational Reproducibility in Data Science",
+    "section": "Second approach: Binder",
+    "text": "Second approach: Binder\n\nLaunches Jupyter notebooks in the cloud\nNo local install needed\nShare reproducible environments\nGreat for teaching and demos\nFree, but limited resources",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
@@ -110,21 +130,21 @@
     ]
   },
   {
-    "objectID": "slides/comprepds/comp_rep_ds.html#main-barriers-running-binder",
-    "href": "slides/comprepds/comp_rep_ds.html#main-barriers-running-binder",
+    "objectID": "slides/comprepds/comp_rep_ds.html#main-drawbacks-running-binder",
+    "href": "slides/comprepds/comp_rep_ds.html#main-drawbacks-running-binder",
     "title": "Computational Reproducibility in Data Science",
-    "section": "Main Barriers running binder",
-    "text": "Main Barriers running binder\n\nStarting the environment can be slow\nFew resources (2 GB in RAM)\nNo persistent storage",
+    "section": "Main drawbacks running binder",
+    "text": "Main drawbacks running binder\n\nStarting the environment can be slow\nFew resources (2 GB in RAM)\nNo persistent storage\nNot reliable for big groups",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
   },
   {
-    "objectID": "slides/comprepds/comp_rep_ds.html#third-hpc-habrok",
-    "href": "slides/comprepds/comp_rep_ds.html#third-hpc-habrok",
+    "objectID": "slides/comprepds/comp_rep_ds.html#third-approach-hpc-habrok",
+    "href": "slides/comprepds/comp_rep_ds.html#third-approach-hpc-habrok",
     "title": "Computational Reproducibility in Data Science",
-    "section": "Third: HPC (Habrok)",
-    "text": "Third: HPC (Habrok)\n\n10,000 + CPU cores\n100+ compute nodes\nHigh-speed InfiniBand network\nLarge memory nodes for demanding tasks\nGPU nodes for accelerated computing\nPetabytes of storage\nShared for research and education",
+    "section": "Third approach: HPC (Habrok)",
+    "text": "Third approach: HPC (Habrok)\n\n10,000 + CPU cores\n100+ compute nodes\nHigh-speed InfiniBand network\nLarge memory nodes for demanding tasks\nGPU nodes for accelerated computing\nPetabytes of storage\nShared for research and education",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
@@ -140,11 +160,11 @@
     ]
   },
   {
-    "objectID": "slides/comprepds/comp_rep_ds.html#fourth-self-hosted-binder",
-    "href": "slides/comprepds/comp_rep_ds.html#fourth-self-hosted-binder",
+    "objectID": "slides/comprepds/comp_rep_ds.html#fourth-approach-self-hosted-binder",
+    "href": "slides/comprepds/comp_rep_ds.html#fourth-approach-self-hosted-binder",
     "title": "Computational Reproducibility in Data Science",
-    "section": "Fourth: self hosted Binder",
-    "text": "Fourth: self hosted Binder\n\nSmall cluster (17 cores)\nLimited memory (2 GB)\n5G persistent storage",
+    "section": "Fourth approach: self hosted Binder",
+    "text": "Fourth approach: self hosted Binder\n\nSmall cluster (17 cores)\nLimited memory (2 GB)\n5G persistent storage",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
@@ -160,21 +180,21 @@
     ]
   },
   {
-    "objectID": "slides/comprepds/comp_rep_ds.html#fifth-github-codespaces",
-    "href": "slides/comprepds/comp_rep_ds.html#fifth-github-codespaces",
+    "objectID": "slides/comprepds/comp_rep_ds.html#fifth-approach-github-codespaces",
+    "href": "slides/comprepds/comp_rep_ds.html#fifth-approach-github-codespaces",
     "title": "Computational Reproducibility in Data Science",
-    "section": "Fifth: GitHub Codespaces",
-    "text": "Fifth: GitHub Codespaces\n\nCloud-based development environments\nRun VS Code and JupyterLab in your browser\nPre-configured for your project\nNo local setup needed\nCode, build, and test from anywhere\nGreat for collaboration and reproducibility",
+    "section": "Fifth approach: GitHub Codespaces",
+    "text": "Fifth approach: GitHub Codespaces\n\nCloud-based development environments\nRun VS Code and JupyterLab in your browser\nPre-configured for your project\nNo local setup needed\nCode, build, and test from anywhere\nGreat for collaboration and reproducibility",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
   },
   {
-    "objectID": "slides/comprepds/comp_rep_ds.html#codespaces",
-    "href": "slides/comprepds/comp_rep_ds.html#codespaces",
+    "objectID": "slides/comprepds/comp_rep_ds.html#github-codespaces",
+    "href": "slides/comprepds/comp_rep_ds.html#github-codespaces",
     "title": "Computational Reproducibility in Data Science",
-    "section": "Codespaces",
-    "text": "Codespaces",
+    "section": "GitHub Codespaces",
+    "text": "GitHub Codespaces",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
@@ -204,7 +224,7 @@
     "href": "slides/comprepds/comp_rep_ds.html#are-github-codespaces-good-enough",
     "title": "Computational Reproducibility in Data Science",
     "section": "Are GitHub codespaces good enough?",
-    "text": "Are GitHub codespaces good enough?\n\nAre good, but not enough\nServe the Data Visualization env via an HPC GUI",
+    "text": "Are GitHub codespaces good enough?\n\nSo far, it is the best approach\nNo technical problems\nStudents get a VM, 8-32 GB in RAM\nDemo codespace",
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]

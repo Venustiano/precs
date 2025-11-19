@@ -130,7 +130,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Computational Reproducibility in Data Science</h1>
-  <p class="subtitle">The Data Visualization use case</p>
+  <p class="subtitle">The Data Visualization Use Case</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -154,21 +154,25 @@ Venustiano Soancatl Aguilar
 <section id="problem" class="slide level2">
 <h2>Problem</h2>
 <ul>
-<li>Audience with different background</li>
-<li>Different skills</li>
+<li>Audience with different background and skills</li>
 <li>Different data</li>
-<li>There is no one-size-fits-all solution</li>
+<li>Different hardware</li>
+<li>Different operating systems</li>
+<li><code>There is no one-size-fits-all solution</code></li>
 </ul>
 </section>
 <section id="goal" class="slide level2">
 <h2>Goal</h2>
 <ul>
-<li>Enable students to quickly reproduce and apply data-visualization techniques.</li>
-<li>Help students efficiently learn and reproduce practical data-visualization workflows.</li>
-<li>Teach reproducible, practical data-visualization skills so students can focus on technique.</li>
+<li>Help students <code>efficiently</code> learn and reproduce practical data-visualization workflows.</li>
+<li>Keep a good <code>balance</code> between theory and practice.</li>
 </ul>
 <!-- Computational reproducibility means that research results obtained through computation can be consistently `re-produced` by others  given the same inputs and methods.  -->
 </section>
+<section id="reproducibility-matrix" class="slide level2">
+<h2>Reproducibility matrix</h2>
+
+<img data-src="./images/reproducible-matrix.jpg" target="https://book.the-turing-way.org/reproducible-research/overview/overview-definitions/#rr-overview-definitions-reproducibility" width="800" class="r-stretch"></section>
 <section id="the-pillars-of-computational-reproducibility" class="slide level2">
 <h2>The Pillars of computational reproducibility</h2>
 <ul>
@@ -179,11 +183,18 @@ Venustiano Soancatl Aguilar
 <li>Workflows</li>
 </ul>
 </section>
-<section id="spectrum-of-reproducibility" class="slide level2">
-<h2>Spectrum of reproducibility</h2>
-
-<img data-src="./images/reproducible-matrix.jpg" target="https://book.the-turing-way.org/reproducible-research/overview/overview-definitions/#rr-overview-definitions-reproducibility" width="800" class="r-stretch"></section>
 <section id="section" class="slide level2">
+<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./images/reproducibility_spectrum.png" class="quarto-figure quarto-figure-center" target="https://www.mdpi.com/2073-4433/11/7/682" width="800"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><code>Peng 2011</code></p>
+</div></aside></section>
+<section id="section-1" class="slide level2">
 <h2></h2>
 <iframe src="https://clauswilke.com/dataviz/" width="1200" height="600">
 </iframe>
@@ -192,8 +203,8 @@ Venustiano Soancatl Aguilar
 <h2>Capturing Computational Envionments</h2>
 
 <img data-src="./images/computational-enviro.png" target="https://book.the-turing-way.org/reproducible-research/renv/renv-options/" width="800" class="r-stretch"></section>
-<section id="first-docker-containers" class="slide level2">
-<h2>First: docker containers</h2>
+<section id="first-approach-docker-containers" class="slide level2">
+<h2>First approach: docker containers</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="./images/container-what-is-container.png" style="width:100.0%" target="https://www.docker.com/app/uploads/2021/11/container-what-is-container-1110x961.png"></p>
@@ -203,24 +214,42 @@ Venustiano Soancatl Aguilar
 </section>
 <section id="pre-built-environments" class="slide level2">
 <h2>Pre-built environments</h2>
+<p>Two repositories including a great variety of python and R packages:</p>
 <ul>
-<li>Jupyter stacks</li>
-<li>Rocker</li>
+<li><a href="https://jupyter-docker-stacks.readthedocs.io/en/latest/">Jupyter stacks</a></li>
+<li><a href="https://rocker-project.org/">Rocker project</a></li>
+<li><ul>
+<li></li>
+</ul></li>
+<li>Additional R and Python packages</li>
+<li>LaTeX</li>
 </ul>
 </section>
-<section id="barriers-to-container-adoption" class="slide level2">
-<h2>Barriers to Container Adoption</h2>
+<section id="instructions-for-the-students" class="slide level2">
+<h2>Instructions for the students</h2>
+<ul>
+<li>Install Docker</li>
+<li>Run the <code>Hello world</code> example</li>
+</ul>
+</section>
+<section id="some-difficulties-of-the-container-approach" class="slide level2">
+<h2>Some difficulties of the container approach</h2>
 <ul>
 <li>Difficulties using the terminal</li>
 <li>Not enough time to teach <code>container management</code></li>
 <li>Not enough <code>storage space</code> on their laptops</li>
 <li>Not enough permissions on their machine</li>
-<li>Computer setup language (Chinese)</li>
+<li>Computer setup language (e. g. Chinese)</li>
 <li>Too many processed running simultaneously</li>
 </ul>
+<!-- ## Results
+
+- Fine
+- Extra time was required
+- Not good enough in terms of efficiency -->
 </section>
-<section id="second-binder" class="slide level2">
-<h2>Second: Binder</h2>
+<section id="second-approach-binder" class="slide level2">
+<h2>Second approach: Binder</h2>
 <ul>
 <li>Launches Jupyter notebooks in the cloud</li>
 <li>No local install needed</li>
@@ -239,16 +268,17 @@ Venustiano Soancatl Aguilar
 </div>
 </div>
 </section>
-<section id="main-barriers-running-binder" class="slide level2">
-<h2>Main Barriers running binder</h2>
+<section id="main-drawbacks-running-binder" class="slide level2">
+<h2>Main drawbacks running binder</h2>
 <ul>
 <li>Starting the environment can be slow</li>
 <li>Few resources (2 GB in RAM)</li>
 <li>No persistent storage</li>
+<li>Not reliable for big groups</li>
 </ul>
 </section>
-<section id="third-hpc-habrok" class="slide level2">
-<h2>Third: HPC (Habrok)</h2>
+<section id="third-approach-hpc-habrok" class="slide level2">
+<h2>Third approach: HPC (Habrok)</h2>
 <ul>
 <li><code>10,000</code> + CPU cores</li>
 <li>100+ compute nodes</li>
@@ -273,8 +303,8 @@ Venustiano Soancatl Aguilar
 <li>Loging into the HPC cluster</li>
 </ul>
 </section>
-<section id="fourth-self-hosted-binder" class="slide level2">
-<h2>Fourth: self hosted Binder</h2>
+<section id="fourth-approach-self-hosted-binder" class="slide level2">
+<h2>Fourth approach: self hosted Binder</h2>
 <ul>
 <li>Small cluster (17 cores)</li>
 <li>Limited memory (2 GB)</li>
@@ -292,8 +322,8 @@ Venustiano Soancatl Aguilar
 </ul></li>
 </ul>
 </section>
-<section id="fifth-github-codespaces" class="slide level2">
-<h2>Fifth: GitHub Codespaces</h2>
+<section id="fifth-approach-github-codespaces" class="slide level2">
+<h2>Fifth approach: GitHub Codespaces</h2>
 <ul>
 <li>Cloud-based development environments</li>
 <li>Run <code>VS Code</code> and <code>JupyterLab</code> in your browser</li>
@@ -303,8 +333,8 @@ Venustiano Soancatl Aguilar
 <li>Great for collaboration and reproducibility</li>
 </ul>
 </section>
-<section id="codespaces" class="slide level2">
-<h2>Codespaces</h2>
+<section id="github-codespaces" class="slide level2">
+<h2>GitHub Codespaces</h2>
 
 <img data-src="./images/configuration-as-code.webp" class="quarto-figure quarto-figure-center r-stretch" target="https://www.analyticsvidhya.com/blog/2025/05/github-codespaces/"></section>
 <section id="assignments" class="slide level2">
@@ -326,8 +356,10 @@ Venustiano Soancatl Aguilar
 <section id="are-github-codespaces-good-enough" class="slide level2">
 <h2>Are GitHub codespaces good enough?</h2>
 <ul>
-<li>Are good, but not enough</li>
-<li>Serve the Data Visualization env via an HPC GUI</li>
+<li>So far, it is the best approach</li>
+<li>No technical problems</li>
+<li>Students get a VM, 8-32 GB in RAM</li>
+<li><a href="https://github.com/DataVisRug">Demo codespace</a></li>
 </ul>
 </section>
 <section id="lessons-learned" class="slide level2">
