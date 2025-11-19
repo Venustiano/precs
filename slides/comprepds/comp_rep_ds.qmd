@@ -1,6 +1,6 @@
 ---
 title: "Computational Reproducibility in Data Science"
-subtitle: "The Data Visualization use case"
+subtitle: "The Data Visualization Use Case"
 author: "Venustiano Soancatl Aguilar"
 format:
   revealjs:
@@ -20,20 +20,25 @@ format:
 
 ## Problem
 
-- Audience with different background
-- Different skills
+- Audience with different background and skills
 - Different data
-- There is no one-size-fits-all solution
+- Different hardware
+- Different operating systems
+- `There is no one-size-fits-all solution`
 
 ## Goal
 
-- Enable students to quickly reproduce and apply data-visualization techniques.
-- Help students efficiently learn and reproduce practical data-visualization workflows.
-- Teach reproducible, practical data-visualization skills so students can focus on technique.
+- Help students `efficiently` learn and reproduce practical data-visualization workflows.
+- Keep a good `balance` between theory and practice.
+
 
 
 <!-- Computational reproducibility means that research results obtained through computation can be consistently `re-produced` by others  given the same inputs and methods.  -->
 
+## Reproducibility matrix
+
+
+![](./images/reproducible-matrix.jpg){ width=800px target="https://book.the-turing-way.org/reproducible-research/overview/overview-definitions/#rr-overview-definitions-reproducibility" }
 
 
 ## The Pillars of computational reproducibility
@@ -44,11 +49,13 @@ format:
 - Documentation
 - Workflows
 
-## Spectrum of reproducibility
+##
 
+![](./images/reproducibility_spectrum.png){ width=800px fig-align="center" target="https://www.mdpi.com/2073-4433/11/7/682" }
 
-![](./images/reproducible-matrix.jpg){ width=800px target="https://book.the-turing-way.org/reproducible-research/overview/overview-definitions/#rr-overview-definitions-reproducibility" }
-
+::: aside
+`Peng 2011`
+:::
 
 ## 
 
@@ -60,7 +67,7 @@ format:
 ![](./images/computational-enviro.png){ width=800px target="https://book.the-turing-way.org/reproducible-research/renv/renv-options/"}
 
 
-## First: docker containers
+## First approach: docker containers
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -73,19 +80,35 @@ format:
 
 ## Pre-built environments
 
-- Jupyter stacks
-- Rocker
+Two repositories including a great variety of python and R packages:
 
-## Barriers to Container Adoption
+- [Jupyter stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/)
+- [Rocker project](https://rocker-project.org/)
+- +
+- Additional R and Python packages
+- LaTeX
+
+## Instructions for the students
+
+- Install Docker
+- Run the `Hello world` example
+
+## Some difficulties of the container approach
 
 - Difficulties using the terminal
 - Not enough time to teach `container management`
 - Not enough `storage space` on their laptops
 - Not enough permissions on their machine
-- Computer setup language (Chinese)
+- Computer setup language (e. g. Chinese)
 - Too many processed running simultaneously
 
-## Second: Binder
+<!-- ## Results
+
+- Fine
+- Extra time was required
+- Not good enough in terms of efficiency -->
+
+## Second approach: Binder
 
 - Launches Jupyter notebooks in the cloud
 - No local install needed
@@ -99,13 +122,15 @@ format:
 ![](./images/binder-comic.png){ width=800px fig-align="center" target="https://book.the-turing-way.org/communication/binder/"}
 :::
 
-## Main Barriers running binder
+## Main drawbacks running binder
 
 - Starting the environment can be slow
 - Few resources (2 GB in RAM)
 - No persistent storage
+- Not reliable for big groups
 
-## Third: HPC (Habrok)
+
+## Third approach: HPC (Habrok)
 
 
  - `10,000` + CPU cores
@@ -125,7 +150,7 @@ format:
   - SSH tunnel
 - Loging into the HPC cluster
 
-## Fourth: self hosted Binder
+## Fourth approach: self hosted Binder
 
 - Small cluster (17 cores)
 - Limited memory (2 GB)
@@ -139,7 +164,7 @@ format:
   - Human
   - Hardware
 
-## Fifth: GitHub Codespaces
+## Fifth approach: GitHub Codespaces
 
 - Cloud-based development environments
 - Run `VS Code` and `JupyterLab` in your browser
@@ -148,7 +173,7 @@ format:
 - Code, build, and test from anywhere
 - Great for collaboration and reproducibility
 
-## Codespaces
+## GitHub Codespaces
 
 ![](./images/configuration-as-code.webp){ fig-align="center" target="https://www.analyticsvidhya.com/blog/2025/05/github-codespaces/"}
 
@@ -168,8 +193,11 @@ format:
 
 ## Are GitHub codespaces good enough?
 
-- Are good, but not enough
-- Serve the Data Visualization env via an HPC GUI
+- So far, it is the best approach
+- No technical problems
+- Students get a VM, 8-32 GB in RAM
+- [Demo codespace](https://github.com/DataVisRug)
+
 
 
 ## Lessons learned
