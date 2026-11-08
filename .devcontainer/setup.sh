@@ -33,6 +33,9 @@ pip install \
     ipykernel \
     jupyterlab
 
+echo "Installing lintr as a prebuilt binary (required by the VS Code R extension)..."
+sudo apt-get install -y --no-install-recommends r-cran-lintr
+
 # Install R packages commonly used in presentations
 echo "Installing R packages..."
 sudo R -e "install.packages(c('rmarkdown', 'knitr', 'ggplot2', 'dplyr', 'tidyr', 'readr', 'stringr', 'purrr', 'tibble', 'forcats', 'lubridate', 'plotly', 'reticulate'), repos='https://cloud.r-project.org/')"
