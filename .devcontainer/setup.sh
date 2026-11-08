@@ -7,13 +7,24 @@ echo "Setting up Quarto development environment..."
 echo "Updating package lists..."
 sudo apt-get update
 
+echo "Installing build tools and R development headers..."
+sudo apt-get install -y --no-install-recommends \
+    build-essential \
+    r-base-dev \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libxml2-dev \
+    libicu-dev \
+    zlib1g-dev \
+    liblzma-dev
+
 # Install Python packages commonly used in presentations
 echo "Installing Python packages..."
 pip install --upgrade pip
 pip install \
     jupyter \
     matplotlib \
-    numpy \    Rscript -e 'if (!requireNamespace("reticulate", quietly = TRUE)) install.packages("reticulate", repos = "https://cloud.r-project.org/"); reticulate::py_install("matplotlib", pip = TRUE)'    Rscript -e 'if (!requireNamespace("reticulate", quietly = TRUE)) install.packages("reticulate", repos = "https://cloud.r-project.org/"); reticulate::py_install("matplotlib", pip = TRUE)'
+    numpy \
     pandas \
     seaborn \
     plotly \

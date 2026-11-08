@@ -7,7 +7,8 @@
       "version": "3.11"
     },
     "ghcr.io/rocker-org/devcontainer-features/r-apt:latest": {
-      "version": "latest"
+      "version": "latest",
+      "vscodeRSupport": "full"
     },
     "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
       "version": "latest"
