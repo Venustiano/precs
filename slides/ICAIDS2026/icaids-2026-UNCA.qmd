@@ -1,0 +1,613 @@
+---
+title: "Data Visualization in the Age of AI"
+subtitle: "From creating visualizations to supervising intelligent systems"
+author: "Venustiano Soancatl Aguilar"
+institute: "7th International Conference on Artificial Intelligence and Data Science (2026) — UNCA"
+date: "2026"
+lang: en
+
+format:
+  revealjs:
+    theme: simple
+    slide-number: c/t
+    progress: true
+    controls: true
+    center: false
+    transition: fade
+    background-transition: fade
+    hash: true
+    width: 1600
+    height: 900
+    margin: 0.08
+    toc: false
+
+execute:
+  echo: false
+  warning: false
+---
+
+<style>
+.reveal {
+  font-size: 30px;
+}
+
+.reveal h1 {
+  font-size: 2.1em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.reveal h2 {
+  font-size: 1.55em;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.reveal h3 {
+  font-size: 1.1em;
+  font-weight: 650;
+}
+
+.reveal p {
+  line-height: 1.4;
+}
+
+.reveal li {
+  margin-bottom: 0.45em;
+  line-height: 1.35;
+}
+
+.reveal blockquote {
+  width: 90%;
+  padding: 0.5em 0.8em;
+  border-left: 5px solid #3572a5;
+  background: #f3f6fa;
+  color: #333;
+  font-style: italic;
+  box-shadow: none;
+}
+
+.reveal .callout {
+  font-size: 0.85em;
+}
+
+.reveal .columns {
+  align-items: stretch;
+}
+
+.reveal .column {
+  padding: 0.5em;
+}
+
+.reveal .fragment {
+  margin-top: 0.3em;
+}
+
+.reveal .mermaid {
+  font-size: 0.8em;
+}
+
+.reveal a {
+  color: #3572a5;
+}
+
+.reveal .slide-number {
+  font-size: 0.6em;
+}
+
+.reveal section {
+  text-align: left;
+}
+
+.reveal section.center,
+.reveal section.title-slide {
+  text-align: center;
+}
+
+.reveal strong {
+  color: #245b87;
+}
+
+.reveal .callout-important {
+  border-left-color: #c18b20;
+}
+</style>
+
+## What is data visualization?
+
+> Data visualization is the graphical representation of quantitative and qualitative information.
+
+But why do we visualize data?
+
+::: {.fragment}
+- **Explore:** Discover patterns, trends, and relationships.
+:::
+
+::: {.fragment}
+- **Validate:** Assess assumptions and the validity of a model.
+:::
+
+::: {.fragment}
+- **Communicate:** Explain findings and support decision-making.
+:::
+
+::: {.fragment}
+- **Understand:** Make complex information accessible.
+:::
+
+---
+
+## The visualization pipeline
+
+A visualization is not simply a chart.
+
+It is the result of a sequence of decisions.
+
+```{mermaid}
+flowchart LR
+    A["Data"] --> B["Questions"]
+    B --> C["Analysis"]
+    C --> D["Visual encoding"]
+    D --> E["Visualization"]
+    E --> F["Interpretation"]
+    F --> G["Communication"]
+
+    style A fill:#dceeff,stroke:#3572a5
+    style D fill:#fff0cc,stroke:#c18b20
+    style E fill:#d8f3dc,stroke:#39834b
+    style G fill:#dceeff,stroke:#3572a5
+```
+
+::: {.fragment}
+**Every stage involves decisions.**
+
+A poor decision early in the pipeline can compromise the final visualization.
+:::
+
+---
+
+## What makes a visualization effective?
+
+An effective visualization enables its intended audience to perceive the intended message quickly and accurately.
+
+::: {.incremental}
+- Can the audience identify the main message?
+- Is the level of detail appropriate?
+- Is the visual representation appropriate for the data?
+- How much cognitive effort is required?
+- Does the visualization support the intended task?
+:::
+
+::: {.callout-important}
+**Effectiveness is not about making a chart look attractive.**
+
+It is about making information understandable and useful.
+:::
+
+---
+
+## Simple charts, complicated problems
+
+A pie chart or a bar chart seems straightforward.
+
+But consider a dataset with:
+
+- More than five variables.
+- Multiple categories.
+- Millions or billions of records.
+- Different temporal and spatial dimensions.
+
+::: {.fragment}
+**The challenge is not necessarily displaying more data.**
+
+The challenge is deciding what information deserves attention.
+:::
+
+::: {.fragment}
+There is also a fundamental constraint:
+
+**The resolution of a computer screen is limited.**
+:::
+
+---
+
+## The constraints of visualization
+
+We cannot display everything simultaneously.
+
+We must make choices.
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### Data complexity
+
+- Number of variables.
+- Number of observations.
+- Data dimensionality.
+- Missing values.
+- Relationships between variables.
+
+:::
+
+::: {.column width="50%"}
+
+### Human constraints
+
+- Audience expertise.
+- Available attention.
+- Visual perception.
+- Cognitive effort.
+- Time available for interpretation.
+
+:::
+
+:::
+
+::: {.fragment}
+**Visualization is fundamentally a process of selection, abstraction, and prioritization.**
+:::
+
+---
+
+## Data visualization vs. data literacy
+
+These concepts are related, but they are not interchangeable.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Data visualization
+
+The representation of information through visual elements.
+
+- Charts and graphs.
+- Visual encoding.
+- Layout and composition.
+- Interaction.
+- Visual communication.
+
+:::
+
+::: {.column width="50%"}
+
+### Data literacy
+
+The ability to work critically and effectively with data.
+
+- Read and interpret.
+- Question and evaluate.
+- Understand uncertainty.
+- Identify misleading representations.
+- Communicate evidence-based insights.
+
+:::
+
+::::
+
+::: {.fragment}
+**Visualization helps us see data. Data literacy helps us understand, question, and use it.**
+:::
+
+---
+
+## The text-only interface as a fundamental bottleneck
+
+> Sometimes you don't have the vocabulary to describe what you envision.
+
+You might imagine:
+
+- A particular spatial arrangement.
+- A specific visual relationship.
+- An interaction between multiple elements.
+- A composition that communicates a particular idea.
+
+But you might not know the terminology required to describe it.
+
+::: {.fragment}
+**The problem is not necessarily a lack of ideas. It may be a lack of vocabulary.**
+:::
+
+---
+
+## Asking the right questions
+
+> To ask the right question is already half the solution of a problem.
+
+— Carl Jung (attributed)
+
+The challenge of asking good questions is much older than artificial intelligence.
+
+Consider the Socratic tradition.
+
+::: {.fragment}
+### The Elenctic method
+
+The term *elenctic* derives from the Greek *elenchein*, meaning to cross-examine or refute.
+
+Rather than immediately providing answers, Socrates used questions to examine assumptions and expose contradictions.
+:::
+
+---
+
+## Learning through questions
+
+Consider some of the questions associated with Socratic inquiry:
+
+::: {.incremental}
+- What is justice?
+- What is knowledge?
+- What is virtue?
+- What makes something good?
+:::
+
+::: {.fragment}
+These questions do not necessarily have straightforward answers.
+
+They require us to:
+
+1. Define concepts.
+2. Examine assumptions.
+3. Identify contradictions.
+4. Refine our understanding.
+5. Ask better questions.
+:::
+
+**The quality of our thinking influences the quality of our questions.**
+
+[Further reading: The Socratic method](https://plato.sydney.edu.au/entries/analysis/s2.html)
+
+---
+
+## From laborers to supervisors
+
+AI is changing the relationship between humans and the production of knowledge.
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### Before AI
+
+**The human as implementer**
+
+- Write code.
+- Process data.
+- Create charts.
+- Adjust layouts.
+- Implement interactions.
+
+:::
+
+::: {.column width="50%"}
+
+### With AI
+
+**The human as supervisor**
+
+- Define problems.
+- Establish objectives.
+- Specify requirements.
+- Evaluate outputs.
+- Provide feedback.
+- Exercise judgment.
+
+:::
+
+:::
+
+::: {.fragment}
+The work does not disappear.
+
+**The nature of the work changes.**
+:::
+
+---
+
+## The center-of-distribution problem
+
+What happens when we do not know precisely what we want?
+
+AI tends to produce a statistically plausible response based on its learned patterns and the context provided.
+
+The result may be reasonable, conventional, and technically correct.
+
+But is it what we actually need?
+
+::: {.fragment}
+### The problem
+
+When we cannot articulate our intentions, we risk receiving the statistical average rather than the particular solution we envisioned.
+:::
+
+::: {.fragment}
+### The consequence
+
+The ability to exercise design judgment becomes increasingly valuable.
+:::
+
+---
+
+## Design becomes the scarce resource
+
+When AI handles implementation, the bottleneck shifts.
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### Implementation
+
+AI can increasingly help with:
+
+- Programming.
+- Data transformation.
+- Chart generation.
+- Styling.
+- Repetitive tasks.
+
+:::
+
+::: {.column width="50%"}
+
+### Design and judgment
+
+Humans still need to:
+
+- Define the problem.
+- Understand the audience.
+- Select visual encodings.
+- Evaluate perception.
+- Make design decisions.
+- Recognize mediocre results.
+
+:::
+
+:::
+
+::: {.fragment}
+**Knowing what to ask for, exercising taste, and evaluating the result become the scarce resources.**
+:::
+
+---
+
+## What does being a supervisor require?
+
+Being a supervisor is not simply writing a prompt and accepting the output.
+
+It requires specific skills:
+
+::: {.incremental}
+- **Problem definition:** What are we trying to solve?
+- **Goal setting:** What should the result achieve?
+- **Communication:** Can we specify our requirements?
+- **Feedback:** Can we identify what needs improvement?
+- **Accountability:** Can we evaluate the consequences?
+- **Judgment:** Can we distinguish good results from mediocre ones?
+:::
+
+::: {.fragment}
+These are skills that we must deliberately develop.
+:::
+
+---
+
+## Implications for data visualization education
+
+If AI handles more of the coding, should we spend less time learning?
+
+Not necessarily.
+
+In fact, the opposite may be true.
+
+::: {.fragment}
+### More theory, less mechanical practice
+:::
+
+::: {.incremental}
+- Understand visual variables.
+- Learn principles of human visual perception.
+- Understand graphical perception.
+- Study visual encoding and representation.
+- Develop design cognition.
+- Learn to evaluate and critique visualizations.
+:::
+
+::: {.callout-important}
+**Understanding design principles becomes more important, not less, because these principles enable us to supervise AI effectively and challenge mediocre outputs.**
+:::
+
+---
+
+## Think before generating
+
+AI can generate high-fidelity visualizations very quickly.
+
+But generating a polished result too early can be counterproductive.
+
+A more productive workflow is:
+
+```{mermaid}
+flowchart LR
+    A["Understand the problem"] --> B["Explore possible solutions"]
+    B --> C["Develop your own ideas"]
+    C --> D["Discuss and refine with AI"]
+    D --> E["Specify requirements"]
+    E --> F["Generate visualization"]
+    F --> G["Evaluate and critique"]
+    G --> H{"Does it communicate?"}
+    H -->|No| D
+    H -->|Yes| I["Communicate insights"]
+
+    style A fill:#dceeff,stroke:#3572a5
+    style C fill:#fff0cc,stroke:#c18b20
+    style D fill:#fff0cc,stroke:#c18b20
+    style G fill:#d8f3dc,stroke:#39834b
+    style I fill:#dceeff,stroke:#3572a5
+```
+
+**Think first. Generate later.**
+
+---
+
+## Decompose the problem
+
+A useful principle when working with AI:
+
+> The more you chop your problem into small pieces, the better AI handles them.
+
+Instead of asking:
+
+::: {.callout-tip}
+"Create a complete and effective visualization of my dataset."
+:::
+
+Break the task into smaller questions:
+
+1. What is the structure of my dataset?
+2. What questions can I investigate?
+3. Which variables are relevant?
+4. What visual encodings are appropriate?
+5. What chart design communicates the message?
+6. How can I evaluate the result?
+
+::: {.fragment}
+**Decomposition makes complex tasks more manageable, both for humans and AI.**
+:::
+
+---
+
+## Final thoughts
+
+::: {.incremental}
+- AI makes visualization implementation increasingly accessible.
+- Accessibility does not automatically produce effective visualizations.
+- Data literacy and design knowledge remain essential.
+- Asking good questions requires understanding the problem.
+- Supervising AI requires critical thinking and visual judgment.
+:::
+
+::: {.fragment}
+# The future is not just about generating visualizations.
+
+# It is about knowing what is worth visualizing.
+:::
+
+---
+
+## References and further reading
+
+- [Data Visualization in the Age of AI — Center for Design](https://medium.com/center-for-design/data-visualization-in-the-age-of-ai-6f44a7024208)
+- [Computational Representation of Data Science](https://venustiano.github.io/precs/slides/comprepds/comp_rep_ds.html)
+- [The Socratic Method — Analysis](https://plato.sydney.edu.au/entries/analysis/s2.html)
+- [Fundamentals of Data Visualization — Claus O. Wilke](https://clauswilke.com/dataviz/)
+
+---
+
+## Thank you!
+
+# Questions and discussion
+
+**What should we teach when AI can generate the visualization for us?**

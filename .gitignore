@@ -439,3 +439,5 @@ _files/
 __pycache__/
 venv/
 .venv/
+
+**/*.quarto_ipynb
