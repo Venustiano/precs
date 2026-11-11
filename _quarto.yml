@@ -7,6 +7,7 @@ website:
   sidebar:
     contents:
       - slides/comprepds/comp_rep_ds.qmd
+      - slides/ICAIDS2026/icaids-2026-UNCA.qmd
 
 format:
   revealjs:
