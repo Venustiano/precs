@@ -370,6 +370,16 @@
     ]
   },
   {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#anscombes-quartet-identical-statistics-different-data",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#anscombes-quartet-identical-statistics-different-data",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Anscombe’s quartet: identical statistics, different data",
+    "text": "Anscombe’s quartet: identical statistics, different data\nFour datasets with the same means, variances, correlation, and regression line:\n\nlibrary(ggplot2)\n\nq &lt;- data.frame(set = factor(rep(1:4, each = 11)),\n                x = unlist(anscombe[paste0(\"x\", 1:4)]),\n                y = unlist(anscombe[paste0(\"y\", 1:4)]))\n\nlab &lt;- sapply(1:4, function(i) {\n  cf &lt;- coef(lm(y ~ x, data = q[q$set == i, ]))\n  sprintf(\"x%d-y%d data\\ny = %.4fx + %.4f\", i, i, cf[2], cf[1])\n})\n\nggplot(q, aes(x, y)) +\n  geom_point(color = \"blue\", size = 2.5) +\n  geom_smooth(method = \"lm\", se = FALSE, color = \"black\") +\n  facet_wrap(~ set, ncol = 2, labeller = labeller(set = setNames(lab, 1:4))) +\n  theme_bw()\n\n\n\nSummary statistics alone can hide radically different patterns.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
     "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#design-becomes-the-scarce-resource",
     "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#design-becomes-the-scarce-resource",
     "title": "Data Visualization in the Age of AI",
