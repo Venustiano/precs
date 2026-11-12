@@ -166,6 +166,16 @@ A poor decision early in the pipeline can compromise the final visualization.
 
 ---
 
+## The communication model
+
+![](./images/communication-model.svg){fig-align="center" width=1000px}
+
+::: {.fragment}
+**The message received is not always the message sent.**
+:::
+
+---
+
 ## What makes a visualization effective?
 
 An effective visualization enables its intended audience to perceive the intended message quickly and accurately.
