@@ -258,5 +258,195 @@
     "crumbs": [
       "Computational Reproducibility in Data Science"
     ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-is-data-visualization",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-is-data-visualization",
+    "title": "Data Visualization in the Age of AI",
+    "section": "What is data visualization?",
+    "text": "What is data visualization?\n\nData visualization is the graphical representation of quantitative and qualitative information.\n\nBut why do we visualize data?\n\n\nExplore: Discover patterns, trends, and relationships.\n\n\n\n\nValidate: Assess assumptions and the validity of a model.\n\n\n\n\nCommunicate: Explain findings and support decision-making.\n\n\n\n\nUnderstand: Make complex information accessible.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-visualization-pipeline",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-visualization-pipeline",
+    "title": "Data Visualization in the Age of AI",
+    "section": "The visualization pipeline",
+    "text": "The visualization pipeline\nA visualization is not simply a chart.\nIt is the result of a sequence of decisions.\n\n\n\n\n\nflowchart LR\n    A[\"Data\"] --&gt; B[\"Questions\"]\n    B --&gt; C[\"Analysis\"]\n    C --&gt; D[\"Visual encoding\"]\n    D --&gt; E[\"Visualization\"]\n    E --&gt; F[\"Interpretation\"]\n    F --&gt; G[\"Communication\"]\n\n    style A fill:#dceeff,stroke:#3572a5\n    style D fill:#fff0cc,stroke:#c18b20\n    style E fill:#d8f3dc,stroke:#39834b\n    style G fill:#dceeff,stroke:#3572a5\n\n\n\n\n\n\n\nEvery stage involves decisions.\nA poor decision early in the pipeline can compromise the final visualization.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-makes-a-visualization-effective",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-makes-a-visualization-effective",
+    "title": "Data Visualization in the Age of AI",
+    "section": "What makes a visualization effective?",
+    "text": "What makes a visualization effective?\nAn effective visualization enables its intended audience to perceive the intended message quickly and accurately.\n\nCan the audience identify the main message?\nIs the level of detail appropriate?\nIs the visual representation appropriate for the data?\nHow much cognitive effort is required?\nDoes the visualization support the intended task?\n\n\n\n\n\n\n\nImportant\n\n\nEffectiveness is not about making a chart look attractive.\nIt is about making information understandable and useful.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#simple-charts-complicated-problems",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#simple-charts-complicated-problems",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Simple charts, complicated problems",
+    "text": "Simple charts, complicated problems\nA pie chart or a bar chart seems straightforward.\nBut consider a dataset with:\n\nMore than five variables.\nMultiple categories.\nMillions or billions of records.\nDifferent temporal and spatial dimensions.\n\n\nThe challenge is not necessarily displaying more data.\nThe challenge is deciding what information deserves attention.\n\n\nThere is also a fundamental constraint:\nThe resolution of a computer screen is limited.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-constraints-of-visualization",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-constraints-of-visualization",
+    "title": "Data Visualization in the Age of AI",
+    "section": "The constraints of visualization",
+    "text": "The constraints of visualization\nWe cannot display everything simultaneously.\nWe must make choices.\n\n\nData complexity\n\nNumber of variables.\nNumber of observations.\nData dimensionality.\nMissing values.\nRelationships between variables.\n\n\nHuman constraints\n\nAudience expertise.\nAvailable attention.\nVisual perception.\nCognitive effort.\nTime available for interpretation.\n\n\n\nVisualization is fundamentally a process of selection, abstraction, and prioritization.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#data-visualization-vs.-data-literacy",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#data-visualization-vs.-data-literacy",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Data visualization vs. data literacy",
+    "text": "Data visualization vs. data literacy\nThese concepts are related, but they are not interchangeable.\n\n\nData visualization\nThe representation of information through visual elements.\n\nCharts and graphs.\nVisual encoding.\nLayout and composition.\nInteraction.\nVisual communication.\n\n\nData literacy\nThe ability to work critically and effectively with data.\n\nRead and interpret.\nQuestion and evaluate.\nUnderstand uncertainty.\nIdentify misleading representations.\nCommunicate evidence-based insights.\n\n\n\nVisualization helps us see data. Data literacy helps us understand, question, and use it.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-text-only-interface-as-a-fundamental-bottleneck",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-text-only-interface-as-a-fundamental-bottleneck",
+    "title": "Data Visualization in the Age of AI",
+    "section": "The text-only interface as a fundamental bottleneck",
+    "text": "The text-only interface as a fundamental bottleneck\n\nSometimes you don’t have the vocabulary to describe what you envision.\n\nYou might imagine:\n\nA particular spatial arrangement.\nA specific visual relationship.\nAn interaction between multiple elements.\nA composition that communicates a particular idea.\n\nBut you might not know the terminology required to describe it.\n\nThe problem is not necessarily a lack of ideas. It may be a lack of vocabulary.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#asking-the-right-questions",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#asking-the-right-questions",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Asking the right questions",
+    "text": "Asking the right questions\n\nTo ask the right question is already half the solution of a problem.\n\n— Carl Jung (attributed)\nThe challenge of asking good questions is much older than artificial intelligence.\nConsider the Socratic tradition.\n\nThe Elenctic method\nThe term elenctic derives from the Greek elenchein, meaning to cross-examine or refute.\nRather than immediately providing answers, Socrates used questions to examine assumptions and expose contradictions.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#learning-through-questions",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#learning-through-questions",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Learning through questions",
+    "text": "Learning through questions\nConsider some of the questions associated with Socratic inquiry:\n\nWhat is justice?\nWhat is knowledge?\nWhat is virtue?\nWhat makes something good?\n\n\nThese questions do not necessarily have straightforward answers.\nThey require us to:\n\nDefine concepts.\nExamine assumptions.\nIdentify contradictions.\nRefine our understanding.\nAsk better questions.\n\n\nThe quality of our thinking influences the quality of our questions.\nFurther reading: The Socratic method",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#from-laborers-to-supervisors",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#from-laborers-to-supervisors",
+    "title": "Data Visualization in the Age of AI",
+    "section": "From laborers to supervisors",
+    "text": "From laborers to supervisors\nAI is changing the relationship between humans and the production of knowledge.\n\n\nBefore AI\nThe human as implementer\n\nWrite code.\nProcess data.\nCreate charts.\nAdjust layouts.\nImplement interactions.\n\n\nWith AI\nThe human as supervisor\n\nDefine problems.\nEstablish objectives.\nSpecify requirements.\nEvaluate outputs.\nProvide feedback.\nExercise judgment.\n\n\n\nThe work does not disappear.\nThe nature of the work changes.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-center-of-distribution-problem",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-center-of-distribution-problem",
+    "title": "Data Visualization in the Age of AI",
+    "section": "The center-of-distribution problem",
+    "text": "The center-of-distribution problem\nWhat happens when we do not know precisely what we want?\nAI tends to produce a statistically plausible response based on its learned patterns and the context provided.\nThe result may be reasonable, conventional, and technically correct.\nBut is it what we actually need?\n\nThe problem\nWhen we cannot articulate our intentions, we risk receiving the statistical average rather than the particular solution we envisioned.\n\n\nThe consequence\nThe ability to exercise design judgment becomes increasingly valuable.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#design-becomes-the-scarce-resource",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#design-becomes-the-scarce-resource",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Design becomes the scarce resource",
+    "text": "Design becomes the scarce resource\nWhen AI handles implementation, the bottleneck shifts.\n\n\nImplementation\nAI can increasingly help with:\n\nProgramming.\nData transformation.\nChart generation.\nStyling.\nRepetitive tasks.\n\n\nDesign and judgment\nHumans still need to:\n\nDefine the problem.\nUnderstand the audience.\nSelect visual encodings.\nEvaluate perception.\nMake design decisions.\nRecognize mediocre results.\n\n\n\nKnowing what to ask for, exercising taste, and evaluating the result become the scarce resources.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-does-being-a-supervisor-require",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-does-being-a-supervisor-require",
+    "title": "Data Visualization in the Age of AI",
+    "section": "What does being a supervisor require?",
+    "text": "What does being a supervisor require?\nBeing a supervisor is not simply writing a prompt and accepting the output.\nIt requires specific skills:\n\nProblem definition: What are we trying to solve?\nGoal setting: What should the result achieve?\nCommunication: Can we specify our requirements?\nFeedback: Can we identify what needs improvement?\nAccountability: Can we evaluate the consequences?\nJudgment: Can we distinguish good results from mediocre ones?\n\n\nThese are skills that we must deliberately develop.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#implications-for-data-visualization-education",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#implications-for-data-visualization-education",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Implications for data visualization education",
+    "text": "Implications for data visualization education\nIf AI handles more of the coding, should we spend less time learning?\nNot necessarily.\nIn fact, the opposite may be true.\n\nMore theory, less mechanical practice\n\n\nUnderstand visual variables.\nLearn principles of human visual perception.\nUnderstand graphical perception.\nStudy visual encoding and representation.\nDevelop design cognition.\nLearn to evaluate and critique visualizations.\n\n\n\n\n\n\n\nImportant\n\n\nUnderstanding design principles becomes more important, not less, because these principles enable us to supervise AI effectively and challenge mediocre outputs.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#think-before-generating",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#think-before-generating",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Think before generating",
+    "text": "Think before generating\nAI can generate high-fidelity visualizations very quickly.\nBut generating a polished result too early can be counterproductive.\nA more productive workflow is:\n\n\n\n\n\nflowchart LR\n    A[\"Understand the problem\"] --&gt; B[\"Explore possible solutions\"]\n    B --&gt; C[\"Develop your own ideas\"]\n    C --&gt; D[\"Discuss and refine with AI\"]\n    D --&gt; E[\"Specify requirements\"]\n    E --&gt; F[\"Generate visualization\"]\n    F --&gt; G[\"Evaluate and critique\"]\n    G --&gt; H{\"Does it communicate?\"}\n    H --&gt;|No| D\n    H --&gt;|Yes| I[\"Communicate insights\"]\n\n    style A fill:#dceeff,stroke:#3572a5\n    style C fill:#fff0cc,stroke:#c18b20\n    style D fill:#fff0cc,stroke:#c18b20\n    style G fill:#d8f3dc,stroke:#39834b\n    style I fill:#dceeff,stroke:#3572a5\n\n\n\n\n\n\nThink first. Generate later.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#decompose-the-problem",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#decompose-the-problem",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Decompose the problem",
+    "text": "Decompose the problem\nA useful principle when working with AI:\n\nThe more you chop your problem into small pieces, the better AI handles them.\n\nInstead of asking:\n\n\n\n\n\n\nTip\n\n\n“Create a complete and effective visualization of my dataset.”\n\n\n\nBreak the task into smaller questions:\n\nWhat is the structure of my dataset?\nWhat questions can I investigate?\nWhich variables are relevant?\nWhat visual encodings are appropriate?\nWhat chart design communicates the message?\nHow can I evaluate the result?\n\n\nDecomposition makes complex tasks more manageable, both for humans and AI.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#final-thoughts",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#final-thoughts",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Final thoughts",
+    "text": "Final thoughts\n\nAI makes visualization implementation increasingly accessible.\nAccessibility does not automatically produce effective visualizations.\nData literacy and design knowledge remain essential.\nAsking good questions requires understanding the problem.\nSupervising AI requires critical thinking and visual judgment.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#references-and-further-reading",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#references-and-further-reading",
+    "title": "Data Visualization in the Age of AI",
+    "section": "References and further reading",
+    "text": "References and further reading\n\nData Visualization in the Age of AI — Center for Design\nComputational Representation of Data Science\nThe Socratic Method — Analysis\nFundamentals of Data Visualization — Claus O. Wilke",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#thank-you",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#thank-you",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Thank you!",
+    "text": "Thank you!",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
   }
 ]
