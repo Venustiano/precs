@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 20 1200 400" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- idea cloud above Messenger -->
+  <g fill="#dceeff">
+    <circle cx="65" cy="150" r="32"/>
+    <circle cx="110" cy="112" r="46"/>
+    <circle cx="172" cy="108" r="42"/>
+    <circle cx="222" cy="144" r="32"/>
+    <rect x="35" y="136" width="220" height="46" rx="23"/>
+  </g>
+  <text x="145" y="148" text-anchor="middle" font-size="16" fill="#1f4e79">Ideas, Discoveries,</text>
+  <text x="145" y="170" text-anchor="middle" font-size="16" fill="#1f4e79">Complexities, Results</text>
+  <line x1="145" y1="186" x2="145" y2="314" stroke="#3572a5" stroke-width="2" stroke-dasharray="4 5"/>
+
+  <!-- insight cloud above Receiver -->
+  <g fill="#d8f3dc">
+    <circle cx="945" cy="150" r="32"/>
+    <circle cx="990" cy="112" r="46"/>
+    <circle cx="1052" cy="108" r="42"/>
+    <circle cx="1102" cy="144" r="32"/>
+    <rect x="915" y="136" width="220" height="46" rx="23"/>
+  </g>
+  <text x="1025" y="148" text-anchor="middle" font-size="16" fill="#375623">Inspiration, Insight,</text>
+  <text x="1025" y="170" text-anchor="middle" font-size="16" fill="#375623">Understanding, Persuasion</text>
+  <line x1="1025" y1="186" x2="1025" y2="314" stroke="#39834b" stroke-width="2" stroke-dasharray="4 5"/>
+
+  <!-- main chain -->
+  <line x1="222" y1="356" x2="286" y2="356" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="442" y1="356" x2="506" y2="356" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="662" y1="356" x2="726" y2="356" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="882" y1="356" x2="946" y2="356" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="320" width="150" height="72" rx="10" fill="#1a1a1a"/>
+  <text x="145" y="357" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff" dominant-baseline="central">Messenger</text>
+
+  <rect x="290" y="320" width="150" height="72" rx="10" fill="#3572a5"/>
+  <text x="365" y="357" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff" dominant-baseline="central">Encode</text>
+
+  <rect x="510" y="320" width="150" height="72" rx="10" fill="#8c8c8c"/>
+  <text x="585" y="357" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff" dominant-baseline="central">Message</text>
+
+  <rect x="730" y="320" width="150" height="72" rx="10" fill="#39834b"/>
+  <text x="805" y="357" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff" dominant-baseline="central">Decode</text>
+
+  <rect x="950" y="320" width="150" height="72" rx="10" fill="#1a1a1a"/>
+  <text x="1025" y="357" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff" dominant-baseline="central">Receiver</text>
+</svg>
