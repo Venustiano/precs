@@ -31,14 +31,11 @@ jobs:
           sudo dpkg -i "/tmp/${FILE}" || (sudo apt-get update && sudo apt-get -f install -y && sudo dpkg -i "/tmp/${FILE}")
           quarto --version
 
-      - name: Render Quarto site
+      - name: Render Quarto slides
         run: |
-          # If your repository is a Quarto site, render the whole site into _site
-          mkdir -p _site
-          # quarto render --output-dir _site
-          # If you only render one file you can do:
-          quarto render slides/comprepds/comp_rep_ds.qmd --to revealjs --output-dir _site
-          ls -la _site
+          quarto render slides/comprepds/comp_rep_ds.qmd
+          quarto render slides/ICAIDS2026/icaids-2026-UNCA.qmd
+          ls -laR _site
 
       - name: Setup Git for gh-pages commit
         run: |
