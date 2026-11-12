@@ -264,67 +264,67 @@
     "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-is-data-visualization",
     "title": "Data Visualization in the Age of AI",
     "section": "What is data visualization?",
-    "text": "What is data visualization?\n\nData visualization is the graphical representation of quantitative and qualitative information.\n\nBut why do we visualize data?\n\n\nExplore: Discover patterns, trends, and relationships.\n\n\n\n\nValidate: Assess assumptions and the validity of a model.\n\n\n\n\nCommunicate: Explain findings and support decision-making.\n\n\n\n\nUnderstand: Make complex information accessible.",
+    "text": "What is data visualization?\n\nData visualization is the graphical representation of quantitative and qualitative information.\n\nBut why do we visualize data?\n\nExplore: Discover patterns, trends, and relationships.\nValidate: Assess assumptions and the validity of a model.\nCommunicate: Explain findings and support decision-making.\nUnderstand: Make complex information accessible.",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
   },
   {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-visualization-pipeline",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-visualization-pipeline",
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#how-can-visualization-be-useful",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#how-can-visualization-be-useful",
     "title": "Data Visualization in the Age of AI",
-    "section": "The visualization pipeline",
-    "text": "The visualization pipeline\nA visualization is not simply a chart.\nIt is the result of a sequence of decisions.\n\n\n\n\n\nflowchart LR\n    A[\"Data\"] --&gt; B[\"Questions\"]\n    B --&gt; C[\"Analysis\"]\n    C --&gt; D[\"Visual encoding\"]\n    D --&gt; E[\"Visualization\"]\n    E --&gt; F[\"Interpretation\"]\n    F --&gt; G[\"Communication\"]\n\n    style A fill:#dceeff,stroke:#3572a5\n    style D fill:#fff0cc,stroke:#c18b20\n    style E fill:#d8f3dc,stroke:#39834b\n    style G fill:#dceeff,stroke:#3572a5\n\n\n\n\n\n\n\nEvery stage involves decisions.\nA poor decision early in the pipeline can compromise the final visualization.",
+    "section": "How can Visualization be Useful?",
+    "text": "How can Visualization be Useful?\nAnscombe’s quartet: same statistics, different data",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
   },
   {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-communication-model",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-communication-model",
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-visualization-pipeline-a-communication-view",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-visualization-pipeline-a-communication-view",
     "title": "Data Visualization in the Age of AI",
-    "section": "The communication model",
-    "text": "The communication model\n\n\nThe message received is not always the message sent.",
+    "section": "The Visualization Pipeline: A Communication View",
+    "text": "The Visualization Pipeline: A Communication View",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
   },
   {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-makes-a-visualization-effective",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-makes-a-visualization-effective",
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#when-do-we-have-a-good-visualization",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#when-do-we-have-a-good-visualization",
     "title": "Data Visualization in the Age of AI",
-    "section": "What makes a visualization effective?",
-    "text": "What makes a visualization effective?\nAn effective visualization enables its intended audience to perceive the intended message quickly and accurately.\n\nCan the audience identify the main message?\nIs the level of detail appropriate?\nIs the visual representation appropriate for the data?\nHow much cognitive effort is required?\nDoes the visualization support the intended task?\n\n\n\n\n\n\n\nImportant\n\n\nEffectiveness is not about making a chart look attractive.\nIt is about making information understandable and useful.",
+    "section": "When do we have a good visualization?",
+    "text": "When do we have a good visualization?\nSimple in theory …\n\nWhen the targeted users can easily accomplish what they want using the visualization\n\nIn practice, complicated …\n\n\n\nCan the audience identify the main message?\nIs the level of detail appropriate?\nIs the visual representation appropriate for the data?\nHow much cognitive effort is required?\nDoes the visualization support the intended task?",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
   },
   {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#simple-charts-complicated-problems",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#simple-charts-complicated-problems",
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-ai-generates-vs.-what-humans-decide",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-ai-generates-vs.-what-humans-decide",
     "title": "Data Visualization in the Age of AI",
-    "section": "Simple charts, complicated problems",
-    "text": "Simple charts, complicated problems\nA pie chart or a bar chart seems straightforward.\nBut consider a dataset with:\n\nMore than five variables.\nMultiple categories.\nMillions or billions of records.\nDifferent temporal and spatial dimensions.\n\n\nThe challenge is not necessarily displaying more data.\nThe challenge is deciding what information deserves attention.\n\n\nThere is also a fundamental constraint:\nThe resolution of a computer screen is limited.",
+    "section": "What AI generates vs. what humans decide",
+    "text": "What AI generates vs. what humans decide\n\n\n\nAI-generated chart (left) vs. human-designed chart (right) of manager performance before and after a training program\n\n\n\n\n\nKnaflic, C. N. (2026, April 23). Data storytelling in the age of AI: what humans still do best. Storytelling with Data",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
   },
   {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-constraints-of-visualization",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-constraints-of-visualization",
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#ai-can-make-your-charts.-it-may-not-make-them-work",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#ai-can-make-your-charts.-it-may-not-make-them-work",
     "title": "Data Visualization in the Age of AI",
-    "section": "The constraints of visualization",
-    "text": "The constraints of visualization\nWe cannot display everything simultaneously.\nWe must make choices.\n\n\nData complexity\n\nNumber of variables.\nNumber of observations.\nData dimensionality.\nMissing values.\nRelationships between variables.\n\n\nHuman constraints\n\nAudience expertise.\nAvailable attention.\nVisual perception.\nCognitive effort.\nTime available for interpretation.\n\n\n\nVisualization is fundamentally a process of selection, abstraction, and prioritization.",
+    "section": "AI can make your charts. It may not make them work",
+    "text": "AI can make your charts. It may not make them work\n\n\n\n\n\n\n\n\n(2026, June 3). AI can make your charts. It may not make them work",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
   },
   {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#data-visualization-vs.-data-literacy",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#data-visualization-vs.-data-literacy",
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#main-restrictions",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#main-restrictions",
     "title": "Data Visualization in the Age of AI",
-    "section": "Data visualization vs. data literacy",
-    "text": "Data visualization vs. data literacy\nThese concepts are related, but they are not interchangeable.\n\n\nData visualization\nThe representation of information through visual elements.\n\nCharts and graphs.\nVisual encoding.\nLayout and composition.\nInteraction.\nVisual communication.\n\n\nData literacy\nThe ability to work critically and effectively with data.\n\nRead and interpret.\nQuestion and evaluate.\nUnderstand uncertainty.\nIdentify misleading representations.\nCommunicate evidence-based insights.\n\n\n\nVisualization helps us see data. Data literacy helps us understand, question, and use it.",
+    "section": "Main restrictions",
+    "text": "Main restrictions\n\nCommunication\nLegal\nCost",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
@@ -334,7 +334,7 @@
     "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-text-only-interface-as-a-fundamental-bottleneck",
     "title": "Data Visualization in the Age of AI",
     "section": "The text-only interface as a fundamental bottleneck",
-    "text": "The text-only interface as a fundamental bottleneck\n\nSometimes you don’t have the vocabulary to describe what you envision.\n\nYou might imagine:\n\nA particular spatial arrangement.\nA specific visual relationship.\nAn interaction between multiple elements.\nA composition that communicates a particular idea.\n\nBut you might not know the terminology required to describe it.\n\nThe problem is not necessarily a lack of ideas. It may be a lack of vocabulary.",
+    "text": "The text-only interface as a fundamental bottleneck\n\nSometimes you don’t have the vocabulary to describe what you envision.\n\nYou might imagine:\n\nA particular spatial arrangement.\nA specific visual relationship.\nAn interaction between multiple elements.\nA composition that communicates a particular idea.\n\nBut you might not know the terminology required to describe it.",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
@@ -344,17 +344,97 @@
     "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#asking-the-right-questions",
     "title": "Data Visualization in the Age of AI",
     "section": "Asking the right questions",
-    "text": "Asking the right questions\n\nTo ask the right question is already half the solution of a problem.\n\n— Carl Jung (attributed)\nThe challenge of asking good questions is much older than artificial intelligence.\nConsider the Socratic tradition.\n\nThe Elenctic method\nThe term elenctic derives from the Greek elenchein, meaning to cross-examine or refute.\nRather than immediately providing answers, Socrates used questions to examine assumptions and expose contradictions.",
+    "text": "Asking the right questions\n\nTo ask the right question is already half the solution of a problem.\n\n— Carl Jung (attributed)\nThe challenge of asking good questions is much older than artificial intelligence.",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
   },
   {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#learning-through-questions",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#learning-through-questions",
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#ai-data-restrictions-to-generate-visualizations",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#ai-data-restrictions-to-generate-visualizations",
     "title": "Data Visualization in the Age of AI",
-    "section": "Learning through questions",
-    "text": "Learning through questions\nConsider some of the questions associated with Socratic inquiry:\n\nWhat is justice?\nWhat is knowledge?\nWhat is virtue?\nWhat makes something good?\n\n\nThese questions do not necessarily have straightforward answers.\nThey require us to:\n\nDefine concepts.\nExamine assumptions.\nIdentify contradictions.\nRefine our understanding.\nAsk better questions.\n\n\nThe quality of our thinking influences the quality of our questions.\nFurther reading: The Socratic method",
+    "section": "AI data restrictions to generate visualizations",
+    "text": "AI data restrictions to generate visualizations\n\nVolume: Upload limits, context windows, processing time.\nCost: API usage, tokens, computational resources.\nPrivacy: Personal and sensitive information (GDPR).\nConfidentiality: Unpublished research and institutional data.\nOwnership: Licensing and intellectual property.\nSecurity: Storage, retention, access and data transfers.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#use-case",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#use-case",
+    "title": "Data Visualization in the Age of AI",
+    "section": "USE CASE",
+    "text": "USE CASE\n\nTeaching practical data visualization for PhD students\n\nConside that students have different:\n\nbackgrounds and skills\ndata\nsample code\ninterests\nhardware\nOperating systems",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#how-can-we-help-students-benefit-from-ai-to-create-their-own-visualizations",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#how-can-we-help-students-benefit-from-ai-to-create-their-own-visualizations",
+    "title": "Data Visualization in the Age of AI",
+    "section": "How can we help students benefit from AI to create their own visualizations?",
+    "text": "How can we help students benefit from AI to create their own visualizations?\n\nAssume that they do not have programming skills",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#materials-and-methods",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#materials-and-methods",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Materials and Methods",
+    "text": "Materials and Methods\n\nStandardized environment in a computer cluster\nData\nJupyterlab Notebooks\nNotebook template\nConsidering that AI is very good at languages, programming languages should not be problem\nWe can ask AI to write the code so that we can copy and paste it in cells",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-ai-needs-to-create-the-code",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-ai-needs-to-create-the-code",
+    "title": "Data Visualization in the Age of AI",
+    "section": "What AI needs to create the code",
+    "text": "What AI needs to create the code\n\nMetadata about the data\n\n\nStructure of the data, rows, columns\nColumn names,\nData types\nSummary statistics\nNull values\n\n\nMain goal of the visualization\n\n\nType of chart\nThe Mapping of variables in to marks (aesthetics)",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#example-of-the-templates",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#example-of-the-templates",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Example of the Templates",
+    "text": "Example of the Templates",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#minimal-training-for-students",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#minimal-training-for-students",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Minimal training for students",
+    "text": "Minimal training for students\n\nHow to login into the cluster and start JupyterLab\nExplanation about what JupyterLab is\nExplanation about what a Notebook is\nExplantion about cells and how to run them",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#visualization-tasks",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#visualization-tasks",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Visualization tasks",
+    "text": "Visualization tasks\n\nTransform the data from long to wide format Normalize the data Create a histogram\n\n\nReproduce a disease plot Merge 2 datasets Create an interactive Heatmap\n\n\nSelect a chart from the Fundamentals of Data Visualizatio book from Claus O. Wilke Render the chapter and save the data for later use Ask AI to rewrite the code in Python and Plotly",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#results",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#results",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Results",
+    "text": "Results",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
@@ -375,16 +455,6 @@
     "title": "Data Visualization in the Age of AI",
     "section": "The center-of-distribution problem",
     "text": "The center-of-distribution problem\nWhat happens when we do not know precisely what we want?\nAI tends to produce a statistically plausible response based on its learned patterns and the context provided.\nThe result may be reasonable, conventional, and technically correct.\nBut is it what we actually need?\n\nThe problem\nWhen we cannot articulate our intentions, we risk receiving the statistical average rather than the particular solution we envisioned.\n\n\nThe consequence\nThe ability to exercise design judgment becomes increasingly valuable.",
-    "crumbs": [
-      "Data Visualization in the Age of AI"
-    ]
-  },
-  {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#anscombes-quartet-identical-statistics-different-data",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#anscombes-quartet-identical-statistics-different-data",
-    "title": "Data Visualization in the Age of AI",
-    "section": "Anscombe’s quartet: identical statistics, different data",
-    "text": "Anscombe’s quartet: identical statistics, different data\nFour datasets with the same means, variances, correlation, and regression line:\n\nlibrary(ggplot2)\n\nq &lt;- data.frame(set = factor(rep(1:4, each = 11)),\n                x = unlist(anscombe[paste0(\"x\", 1:4)]),\n                y = unlist(anscombe[paste0(\"y\", 1:4)]))\n\nlab &lt;- sapply(1:4, function(i) {\n  cf &lt;- coef(lm(y ~ x, data = q[q$set == i, ]))\n  sprintf(\"x%d-y%d data\\ny = %.4fx + %.4f\", i, i, cf[2], cf[1])\n})\n\nggplot(q, aes(x, y)) +\n  geom_point(color = \"blue\", size = 2.5) +\n  geom_smooth(method = \"lm\", se = FALSE, color = \"black\") +\n  facet_wrap(~ set, ncol = 2, labeller = labeller(set = setNames(lab, 1:4))) +\n  theme_bw()\n\n\n\nSummary statistics alone can hide radically different patterns.",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]

@@ -29,72 +29,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -200,7 +134,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Data Visualization in the Age of AI</h1>
-  <p class="subtitle">From creating visualizations to supervising intelligent systems</p>
+  <p class="subtitle">A PhD students case study</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -310,166 +244,75 @@ Venustiano Soancatl Aguilar
 <p>Data visualization is the graphical representation of quantitative and qualitative information.</p>
 </blockquote>
 <p>But why do we visualize data?</p>
-<div class="fragment">
 <ul>
-<li><strong>Explore:</strong> Discover patterns, trends, and relationships.</li>
+<li><p><strong>Explore:</strong> Discover patterns, trends, and relationships.</p></li>
+<li><p><strong>Validate:</strong> Assess assumptions and the validity of a model.</p></li>
+<li><p><strong>Communicate:</strong> Explain findings and support decision-making.</p></li>
+<li><p><strong>Understand:</strong> Make complex information accessible.</p></li>
 </ul>
-</div>
-<div class="fragment">
-<ul>
-<li><strong>Validate:</strong> Assess assumptions and the validity of a model.</li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><strong>Communicate:</strong> Explain findings and support decision-making.</li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><strong>Understand:</strong> Make complex information accessible.</li>
-</ul>
-</div>
 </section>
-<section id="the-visualization-pipeline" class="slide level2">
-<h2>The visualization pipeline</h2>
-<p>A visualization is not simply a chart.</p>
-<p>It is the result of a sequence of decisions.</p>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-    A["Data"] --&gt; B["Questions"]
-    B --&gt; C["Analysis"]
-    C --&gt; D["Visual encoding"]
-    D --&gt; E["Visualization"]
-    E --&gt; F["Interpretation"]
-    F --&gt; G["Communication"]
+<section id="how-can-visualization-be-useful" class="slide level2">
+<h2>How can Visualization be Useful?</h2>
+<p>Anscombe’s quartet: same statistics, different data</p>
 
-    style A fill:#dceeff,stroke:#3572a5
-    style D fill:#fff0cc,stroke:#c18b20
-    style E fill:#d8f3dc,stroke:#39834b
-    style G fill:#dceeff,stroke:#3572a5
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<div class="fragment">
-<p><strong>Every stage involves decisions.</strong></p>
-<p>A poor decision early in the pipeline can compromise the final visualization.</p>
-</div>
-</section>
-<section id="the-communication-model" class="slide level2">
-<h2>The communication model</h2>
+<img data-src="icaids-2026-UNCA_files/figure-revealjs/unnamed-chunk-1-1.png" width="864" class="r-stretch"></section>
+<section id="the-visualization-pipeline-a-communication-view" class="slide level2">
+<h2>The Visualization Pipeline: A Communication View</h2>
 
-<img data-src="./images/communication-model.svg" class="quarto-figure quarto-figure-center r-stretch" width="1000"><div class="fragment">
-<p><strong>The message received is not always the message sent.</strong></p>
-</div>
+<img data-src="./images/communication-model.svg" class="quarto-figure quarto-figure-center r-stretch" width="1000"></section>
+<section id="when-do-we-have-a-good-visualization" class="slide level2">
+<h2>When do we have a good visualization?</h2>
+<p>Simple in theory …</p>
+<blockquote>
+<p>When the targeted users can easily accomplish what they want using the visualization</p>
+</blockquote>
+<p>In practice, complicated …</p>
+<blockquote>
+
+<ul>
+<li>Can the audience identify the main message?</li>
+<li>Is the level of detail appropriate?</li>
+<li>Is the visual representation appropriate for the data?</li>
+<li>How much cognitive effort is required?</li>
+<li>Does the visualization support the intended task?</li>
+</ul>
+
+</blockquote>
 </section>
-<section id="what-makes-a-visualization-effective" class="slide level2">
-<h2>What makes a visualization effective?</h2>
-<p>An effective visualization enables its intended audience to perceive the intended message quickly and accurately.</p>
+<section id="what-ai-generates-vs.-what-humans-decide" class="slide level2">
+<h2>What AI generates vs.&nbsp;what humans decide</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/AI-vs-human.png" width="800"></p>
+<figcaption>AI-generated chart (left) vs.&nbsp;human-designed chart (right) of manager performance before and after a training program</figcaption>
+</figure>
+</div>
+
+<aside><div>
 <ul>
-<li class="fragment">Can the audience identify the main message?</li>
-<li class="fragment">Is the level of detail appropriate?</li>
-<li class="fragment">Is the visual representation appropriate for the data?</li>
-<li class="fragment">How much cognitive effort is required?</li>
-<li class="fragment">Does the visualization support the intended task?</li>
+<li><a href="https://www.storytellingwithdata.com/blog/data-storytelling-in-the-age-of-ai">Knaflic, C. N. (2026, April 23). Data storytelling in the age of AI: what humans still do best. Storytelling with Data</a></li>
 </ul>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+</div></aside></section>
+<section id="ai-can-make-your-charts.-it-may-not-make-them-work" class="slide level2">
+<h2>AI can make your charts. It may not make them work</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/ENI10_Cover_1-1.jpg" class="quarto-figure quarto-figure-center" width="700"></p>
+</figure>
 </div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p><strong>Effectiveness is not about making a chart look attractive.</strong></p>
-<p>It is about making information understandable and useful.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="simple-charts-complicated-problems" class="slide level2">
-<h2>Simple charts, complicated problems</h2>
-<p>A pie chart or a bar chart seems straightforward.</p>
-<p>But consider a dataset with:</p>
+
+<aside><div>
 <ul>
-<li>More than five variables.</li>
-<li>Multiple categories.</li>
-<li>Millions or billions of records.</li>
-<li>Different temporal and spatial dimensions.</li>
+<li><a href="https://thevisualagency.com/tva-blog-articles/ai-can-make-your-charts-it-may-not-make-them-work/">(2026, June 3). AI can make your charts. It may not make them work</a></li>
 </ul>
-<div class="fragment">
-<p><strong>The challenge is not necessarily displaying more data.</strong></p>
-<p>The challenge is deciding what information deserves attention.</p>
-</div>
-<div class="fragment">
-<p>There is also a fundamental constraint:</p>
-<p><strong>The resolution of a computer screen is limited.</strong></p>
-</div>
-</section>
-<section id="the-constraints-of-visualization" class="slide level2">
-<h2>The constraints of visualization</h2>
-<p>We cannot display everything simultaneously.</p>
-<p>We must make choices.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="data-complexity">Data complexity</h3>
+</div></aside></section>
+<section id="main-restrictions" class="slide level2">
+<h2>Main restrictions</h2>
 <ul>
-<li>Number of variables.</li>
-<li>Number of observations.</li>
-<li>Data dimensionality.</li>
-<li>Missing values.</li>
-<li>Relationships between variables.</li>
+<li>Communication</li>
+<li>Legal</li>
+<li>Cost</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<h3 id="human-constraints">Human constraints</h3>
-<ul>
-<li>Audience expertise.</li>
-<li>Available attention.</li>
-<li>Visual perception.</li>
-<li>Cognitive effort.</li>
-<li>Time available for interpretation.</li>
-</ul>
-</div></div>
-<div class="fragment">
-<p><strong>Visualization is fundamentally a process of selection, abstraction, and prioritization.</strong></p>
-</div>
-</section>
-<section id="data-visualization-vs.-data-literacy" class="slide level2">
-<h2>Data visualization vs.&nbsp;data literacy</h2>
-<p>These concepts are related, but they are not interchangeable.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="data-visualization">Data visualization</h3>
-<p>The representation of information through visual elements.</p>
-<ul>
-<li>Charts and graphs.</li>
-<li>Visual encoding.</li>
-<li>Layout and composition.</li>
-<li>Interaction.</li>
-<li>Visual communication.</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<h3 id="data-literacy">Data literacy</h3>
-<p>The ability to work critically and effectively with data.</p>
-<ul>
-<li>Read and interpret.</li>
-<li>Question and evaluate.</li>
-<li>Understand uncertainty.</li>
-<li>Identify misleading representations.</li>
-<li>Communicate evidence-based insights.</li>
-</ul>
-</div></div>
-<div class="fragment">
-<p><strong>Visualization helps us see data. Data literacy helps us understand, question, and use it.</strong></p>
-</div>
 </section>
 <section id="the-text-only-interface-as-a-fundamental-bottleneck" class="slide level2">
 <h2>The text-only interface as a fundamental bottleneck</h2>
@@ -484,9 +327,6 @@ Venustiano Soancatl Aguilar
 <li>A composition that communicates a particular idea.</li>
 </ul>
 <p>But you might not know the terminology required to describe it.</p>
-<div class="fragment">
-<p><strong>The problem is not necessarily a lack of ideas. It may be a lack of vocabulary.</strong></p>
-</div>
 </section>
 <section id="asking-the-right-questions" class="slide level2">
 <h2>Asking the right questions</h2>
@@ -495,35 +335,96 @@ Venustiano Soancatl Aguilar
 </blockquote>
 <p>— Carl Jung (attributed)</p>
 <p>The challenge of asking good questions is much older than artificial intelligence.</p>
-<p>Consider the Socratic tradition.</p>
-<div class="fragment">
-<h3 id="the-elenctic-method">The Elenctic method</h3>
-<p>The term <em>elenctic</em> derives from the Greek <em>elenchein</em>, meaning to cross-examine or refute.</p>
-<p>Rather than immediately providing answers, Socrates used questions to examine assumptions and expose contradictions.</p>
-</div>
 </section>
-<section id="learning-through-questions" class="slide level2">
-<h2>Learning through questions</h2>
-<p>Consider some of the questions associated with Socratic inquiry:</p>
+<section id="ai-data-restrictions-to-generate-visualizations" class="slide level2">
+<h2>AI data restrictions to generate visualizations</h2>
 <ul>
-<li class="fragment">What is justice?</li>
-<li class="fragment">What is knowledge?</li>
-<li class="fragment">What is virtue?</li>
-<li class="fragment">What makes something good?</li>
+<li><strong>Volume:</strong> Upload limits, context windows, processing time.</li>
+<li><strong>Cost:</strong> API usage, tokens, computational resources.</li>
+<li><strong>Privacy:</strong> Personal and sensitive information (GDPR).</li>
+<li><strong>Confidentiality:</strong> Unpublished research and institutional data.</li>
+<li><strong>Ownership:</strong> Licensing and intellectual property.</li>
+<li><strong>Security:</strong> Storage, retention, access and data transfers.</li>
 </ul>
-<div class="fragment">
-<p>These questions do not necessarily have straightforward answers.</p>
-<p>They require us to:</p>
-<ol type="1">
-<li>Define concepts.</li>
-<li>Examine assumptions.</li>
-<li>Identify contradictions.</li>
-<li>Refine our understanding.</li>
-<li>Ask better questions.</li>
-</ol>
-</div>
-<p><strong>The quality of our thinking influences the quality of our questions.</strong></p>
-<p><a href="https://plato.sydney.edu.au/entries/analysis/s2.html">Further reading: The Socratic method</a></p>
+</section>
+<section id="use-case" class="slide level2">
+<h2>USE CASE</h2>
+<blockquote>
+<p>Teaching practical data visualization for PhD students</p>
+</blockquote>
+<p>Conside that students have different:</p>
+<ul>
+<li>backgrounds and skills</li>
+<li>data</li>
+<li>sample code</li>
+<li>interests</li>
+<li>hardware</li>
+<li>Operating systems</li>
+</ul>
+</section>
+<section id="how-can-we-help-students-benefit-from-ai-to-create-their-own-visualizations" class="slide level2">
+<h2>How can we help students benefit from AI to create their own visualizations?</h2>
+<blockquote>
+<p>Assume that they do not have programming skills</p>
+</blockquote>
+</section>
+<section id="materials-and-methods" class="slide level2">
+<h2>Materials and Methods</h2>
+<ul>
+<li>Standardized environment in a computer cluster</li>
+<li>Data</li>
+<li>Jupyterlab Notebooks</li>
+<li>Notebook template</li>
+<li>Considering that AI is very good at languages, programming languages should not be problem</li>
+<li>We can ask AI to write the code so that we can copy and paste it in cells</li>
+</ul>
+</section>
+<section id="what-ai-needs-to-create-the-code" class="slide level2">
+<h2>What AI needs to create the code</h2>
+<blockquote>
+<p>Metadata about the data</p>
+</blockquote>
+<ul>
+<li>Structure of the data, <code>rows</code>, <code>columns</code></li>
+<li>Column names,</li>
+<li>Data types</li>
+<li>Summary statistics</li>
+<li>Null values</li>
+</ul>
+<blockquote>
+<p>Main goal of the visualization</p>
+</blockquote>
+<ul>
+<li>Type of chart</li>
+<li>The Mapping of variables in to marks (aesthetics)</li>
+</ul>
+</section>
+<section id="example-of-the-templates" class="slide level2">
+<h2>Example of the Templates</h2>
+</section>
+<section id="minimal-training-for-students" class="slide level2">
+<h2>Minimal training for students</h2>
+<ul>
+<li>How to login into the cluster and start JupyterLab</li>
+<li>Explanation about what JupyterLab is</li>
+<li>Explanation about what a Notebook is</li>
+<li>Explantion about cells and how to run them</li>
+</ul>
+</section>
+<section id="visualization-tasks" class="slide level2">
+<h2>Visualization tasks</h2>
+<blockquote>
+<p>Transform the data from long to wide format Normalize the data Create a histogram</p>
+</blockquote>
+<blockquote>
+<p>Reproduce a disease plot Merge 2 datasets Create an interactive Heatmap</p>
+</blockquote>
+<blockquote>
+<p>Select a chart from the <code>Fundamentals of Data Visualizatio</code> book from Claus O. Wilke Render the chapter and save the data for later use Ask AI to rewrite the code in Python and Plotly</p>
+</blockquote>
+</section>
+<section id="results" class="slide level2">
+<h2>Results</h2>
 </section>
 <section id="from-laborers-to-supervisors" class="slide level2">
 <h2>From laborers to supervisors</h2>
@@ -569,32 +470,6 @@ Venustiano Soancatl Aguilar
 <div class="fragment">
 <h3 id="the-consequence">The consequence</h3>
 <p>The ability to exercise design judgment becomes increasingly valuable.</p>
-</div>
-</section>
-<section id="anscombes-quartet-identical-statistics-different-data" class="slide level2">
-<h2>Anscombe’s quartet: identical statistics, different data</h2>
-<p>Four datasets with the same means, variances, correlation, and regression line:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a>q <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">set =</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">each =</span> <span class="dv">11</span>)),</span>
-<span id="cb1-4"><a></a>                <span class="at">x =</span> <span class="fu">unlist</span>(anscombe[<span class="fu">paste0</span>(<span class="st">"x"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)]),</span>
-<span id="cb1-5"><a></a>                <span class="at">y =</span> <span class="fu">unlist</span>(anscombe[<span class="fu">paste0</span>(<span class="st">"y"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)]))</span>
-<span id="cb1-6"><a></a></span>
-<span id="cb1-7"><a></a>lab <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="cf">function</span>(i) {</span>
-<span id="cb1-8"><a></a>  cf <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data =</span> q[q<span class="sc">$</span>set <span class="sc">==</span> i, ]))</span>
-<span id="cb1-9"><a></a>  <span class="fu">sprintf</span>(<span class="st">"x%d-y%d data</span><span class="sc">\n</span><span class="st">y = %.4fx + %.4f"</span>, i, i, cf[<span class="dv">2</span>], cf[<span class="dv">1</span>])</span>
-<span id="cb1-10"><a></a>})</span>
-<span id="cb1-11"><a></a></span>
-<span id="cb1-12"><a></a><span class="fu">ggplot</span>(q, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
-<span id="cb1-13"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="fl">2.5</span>) <span class="sc">+</span></span>
-<span id="cb1-14"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
-<span id="cb1-15"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> set, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">labeller =</span> <span class="fu">labeller</span>(<span class="at">set =</span> <span class="fu">setNames</span>(lab, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>))) <span class="sc">+</span></span>
-<span id="cb1-16"><a></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="icaids-2026-UNCA_files/figure-revealjs/unnamed-chunk-2-1.png" width="864" class="r-stretch"><div class="fragment">
-<p><strong>Summary statistics alone can hide radically different patterns.</strong></p>
 </div>
 </section>
 <section id="design-becomes-the-scarce-resource" class="slide level2">
