@@ -430,6 +430,38 @@ The ability to exercise design judgment becomes increasingly valuable.
 
 ---
 
+## Anscombe's quartet: identical statistics, different data
+
+Four datasets with the same means, variances, correlation, and regression line:
+
+```{r}
+#| echo: true
+#| fig-width: 9
+#| fig-height: 4.5
+library(ggplot2)
+
+q <- data.frame(set = factor(rep(1:4, each = 11)),
+                x = unlist(anscombe[paste0("x", 1:4)]),
+                y = unlist(anscombe[paste0("y", 1:4)]))
+
+lab <- sapply(1:4, function(i) {
+  cf <- coef(lm(y ~ x, data = q[q$set == i, ]))
+  sprintf("x%d-y%d data\ny = %.4fx + %.4f", i, i, cf[2], cf[1])
+})
+
+ggplot(q, aes(x, y)) +
+  geom_point(color = "blue", size = 2.5) +
+  geom_smooth(method = "lm", se = FALSE, color = "black") +
+  facet_wrap(~ set, ncol = 2, labeller = labeller(set = setNames(lab, 1:4))) +
+  theme_bw()
+```
+
+::: {.fragment}
+**Summary statistics alone can hide radically different patterns.**
+:::
+
+---
+
 ## Design becomes the scarce resource
 
 When AI handles implementation, the bottleneck shifts.
