@@ -31,6 +31,21 @@ jobs:
           sudo dpkg -i "/tmp/${FILE}" || (sudo apt-get update && sudo apt-get -f install -y && sudo dpkg -i "/tmp/${FILE}")
           quarto --version
 
+      - name: Install system libraries needed to compile R packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libuv1-dev
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "release"
+
+      - name: Install R packages needed by the slides
+        run: |
+          R -e "install.packages(c('rmarkdown', 'knitr', 'ggplot2'), repos='https://cloud.r-project.org/')"
+          R -e "stopifnot(requireNamespace('rmarkdown', quietly = TRUE), requireNamespace('knitr', quietly = TRUE), requireNamespace('ggplot2', quietly = TRUE))"
+
       - name: Render Quarto slides
         run: |
           quarto render slides/comprepds/comp_rep_ds.qmd
