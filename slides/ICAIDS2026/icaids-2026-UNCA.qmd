@@ -1,6 +1,6 @@
 ---
 title: "Data Visualization in the Age of AI"
-subtitle: "From creating visualizations to supervising intelligent systems"
+subtitle: "A PhD students case study"
 author: "Venustiano Soancatl Aguilar"
 institute: "7th International Conference on Artificial Intelligence and Data Science (2026) — UNCA"
 date: "2026"
@@ -113,185 +113,106 @@ execute:
 }
 </style>
 
+---
+
 ## What is data visualization?
 
 > Data visualization is the graphical representation of quantitative and qualitative information.
 
 But why do we visualize data?
 
-::: {.fragment}
+
 - **Explore:** Discover patterns, trends, and relationships.
-:::
 
-::: {.fragment}
 - **Validate:** Assess assumptions and the validity of a model.
-:::
 
-::: {.fragment}
 - **Communicate:** Explain findings and support decision-making.
-:::
 
-::: {.fragment}
 - **Understand:** Make complex information accessible.
-:::
+
 
 ---
 
-## The visualization pipeline
+## How can Visualization be Useful?
 
-A visualization is not simply a chart.
+Anscombe's quartet: same statistics, different data
 
-It is the result of a sequence of decisions.
+```{r}
+#| echo: false
+#| fig-width: 9
+#| fig-height: 4.5
+library(ggplot2)
 
-```{mermaid}
-flowchart LR
-    A["Data"] --> B["Questions"]
-    B --> C["Analysis"]
-    C --> D["Visual encoding"]
-    D --> E["Visualization"]
-    E --> F["Interpretation"]
-    F --> G["Communication"]
+q <- data.frame(set = factor(rep(1:4, each = 11)),
+                x = unlist(anscombe[paste0("x", 1:4)]),
+                y = unlist(anscombe[paste0("y", 1:4)]))
 
-    style A fill:#dceeff,stroke:#3572a5
-    style D fill:#fff0cc,stroke:#c18b20
-    style E fill:#d8f3dc,stroke:#39834b
-    style G fill:#dceeff,stroke:#3572a5
+lab <- sapply(1:4, function(i) {
+  cf <- coef(lm(y ~ x, data = q[q$set == i, ]))
+  sprintf("x%d-y%d data\ny = %.4fx + %.4f", i, i, cf[2], cf[1])
+})
+
+ggplot(q, aes(x, y)) +
+  geom_point(color = "blue", size = 2.5) +
+  geom_smooth(method = "lm", se = FALSE, color = "black") +
+  facet_wrap(~ set, ncol = 2, labeller = labeller(set = setNames(lab, 1:4))) +
+  theme_bw()
 ```
 
-::: {.fragment}
-**Every stage involves decisions.**
+---
 
-A poor decision early in the pipeline can compromise the final visualization.
+## The Visualization Pipeline: A Communication View
+
+![](./images/communication-model.svg){fig-align="center" width=1000px}
+
+
+---
+
+## When do we have a good visualization?
+
+Simple in theory ...
+
+> When the targeted users can easily accomplish what they want using the visualization
+
+
+In practice, complicated ...
+
+> - Can the audience identify the main message?
+> - Is the level of detail appropriate?
+> - Is the visual representation appropriate for the data?
+> - How much cognitive effort is required?
+> - Does the visualization support the intended task?
+
+---
+
+## What AI generates vs. what humans decide
+
+![AI-generated chart (left) vs. human-designed chart (right) of manager performance before and after a training program](images/AI-vs-human.png){fig-align="center" width=800px}
+
+::: aside
+- [Knaflic, C. N. (2026, April 23). Data storytelling in the age of AI: what humans still do best. Storytelling with Data](https://www.storytellingwithdata.com/blog/data-storytelling-in-the-age-of-ai)
 :::
 
 ---
 
-## What makes a visualization effective?
+## AI can make your charts. It may not make them work
 
-An effective visualization enables its intended audience to perceive the intended message quickly and accurately.
+![](images/ENI10_Cover_1-1.jpg){fig-align="center" width=700px}
 
-::: {.incremental}
-- Can the audience identify the main message?
-- Is the level of detail appropriate?
-- Is the visual representation appropriate for the data?
-- How much cognitive effort is required?
-- Does the visualization support the intended task?
-:::
-
-::: {.callout-important}
-**Effectiveness is not about making a chart look attractive.**
-
-It is about making information understandable and useful.
+::: aside
+- [(2026, June 3). AI can make your charts. It may not make them work](https://thevisualagency.com/tva-blog-articles/ai-can-make-your-charts-it-may-not-make-them-work/)
 :::
 
 ---
 
-## Simple charts, complicated problems
+## Main restrictions
 
-A pie chart or a bar chart seems straightforward.
-
-But consider a dataset with:
-
-- More than five variables.
-- Multiple categories.
-- Millions or billions of records.
-- Different temporal and spatial dimensions.
-
-::: {.fragment}
-**The challenge is not necessarily displaying more data.**
-
-The challenge is deciding what information deserves attention.
-:::
-
-::: {.fragment}
-There is also a fundamental constraint:
-
-**The resolution of a computer screen is limited.**
-:::
+- Communication
+- Legal
+- Cost
 
 ---
 
-## The constraints of visualization
-
-We cannot display everything simultaneously.
-
-We must make choices.
-
-::: {.columns}
-
-::: {.column width="50%"}
-
-### Data complexity
-
-- Number of variables.
-- Number of observations.
-- Data dimensionality.
-- Missing values.
-- Relationships between variables.
-
-:::
-
-::: {.column width="50%"}
-
-### Human constraints
-
-- Audience expertise.
-- Available attention.
-- Visual perception.
-- Cognitive effort.
-- Time available for interpretation.
-
-:::
-
-:::
-
-::: {.fragment}
-**Visualization is fundamentally a process of selection, abstraction, and prioritization.**
-:::
-
----
-
-## Data visualization vs. data literacy
-
-These concepts are related, but they are not interchangeable.
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-### Data visualization
-
-The representation of information through visual elements.
-
-- Charts and graphs.
-- Visual encoding.
-- Layout and composition.
-- Interaction.
-- Visual communication.
-
-:::
-
-::: {.column width="50%"}
-
-### Data literacy
-
-The ability to work critically and effectively with data.
-
-- Read and interpret.
-- Question and evaluate.
-- Understand uncertainty.
-- Identify misleading representations.
-- Communicate evidence-based insights.
-
-:::
-
-::::
-
-::: {.fragment}
-**Visualization helps us see data. Data literacy helps us understand, question, and use it.**
-:::
-
----
 
 ## The text-only interface as a fundamental bottleneck
 
@@ -306,10 +227,6 @@ You might imagine:
 
 But you might not know the terminology required to describe it.
 
-::: {.fragment}
-**The problem is not necessarily a lack of ideas. It may be a lack of vocabulary.**
-:::
-
 ---
 
 ## Asking the right questions
@@ -320,44 +237,100 @@ But you might not know the terminology required to describe it.
 
 The challenge of asking good questions is much older than artificial intelligence.
 
-Consider the Socratic tradition.
-
-::: {.fragment}
-### The Elenctic method
-
-The term *elenctic* derives from the Greek *elenchein*, meaning to cross-examine or refute.
-
-Rather than immediately providing answers, Socrates used questions to examine assumptions and expose contradictions.
-:::
 
 ---
 
-## Learning through questions
+## AI data restrictions to generate visualizations
 
-Consider some of the questions associated with Socratic inquiry:
 
-::: {.incremental}
-- What is justice?
-- What is knowledge?
-- What is virtue?
-- What makes something good?
-:::
+- **Volume:** Upload limits, context windows, processing time.
+- **Cost:** API usage, tokens, computational resources.
+- **Privacy:** Personal and sensitive information (GDPR).
+- **Confidentiality:** Unpublished research and institutional data.
+- **Ownership:** Licensing and intellectual property.
+- **Security:** Storage, retention, access and data transfers.
 
-::: {.fragment}
-These questions do not necessarily have straightforward answers.
+---
 
-They require us to:
+## USE CASE
 
-1. Define concepts.
-2. Examine assumptions.
-3. Identify contradictions.
-4. Refine our understanding.
-5. Ask better questions.
-:::
+> Teaching practical data visualization for PhD students
 
-**The quality of our thinking influences the quality of our questions.**
+Conside that students have different:
 
-[Further reading: The Socratic method](https://plato.sydney.edu.au/entries/analysis/s2.html)
+- backgrounds and skills
+- data
+- sample code
+- interests
+- hardware
+- Operating systems
+
+---
+
+## How can we help students benefit from AI to create their own visualizations?
+
+> Assume that they do not have programming skills
+
+---
+
+## Materials and Methods
+
+- Standardized environment in a computer cluster
+- Data
+- Jupyterlab Notebooks
+- Notebook template
+- Considering that AI is very good at languages, programming languages should not be problem
+- We can ask AI to write the code so that we can copy and paste it in cells
+
+---
+
+## What AI needs to create the code
+
+> Metadata about the data
+
+- Structure of the data, `rows`, `columns`
+- Column names,
+- Data types
+- Summary statistics
+- Null values
+
+> Main goal of the visualization
+
+- Type of chart
+- The Mapping of variables in to marks (aesthetics)
+
+---
+
+## Example of the Templates
+
+---
+
+## Minimal training for students
+
+- How to login into the cluster and start JupyterLab
+- Explanation about what JupyterLab is
+- Explanation about what a Notebook is
+- Explantion about cells and how to run them
+
+---
+
+## Visualization tasks
+
+> Transform the data from long to wide format
+> Normalize the data
+> Create a histogram
+
+> Reproduce a disease plot
+> Merge 2 datasets
+> Create an interactive Heatmap
+
+> Select a chart from the `Fundamentals of Data Visualizatio` book from Claus  O. Wilke
+> Render the chapter and save the data for later use
+> Ask AI to rewrite the code in Python and Plotly
+
+---
+
+## Results
 
 ---
 
