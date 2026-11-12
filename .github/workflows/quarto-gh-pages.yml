@@ -33,7 +33,8 @@ jobs:
 
       - name: Render Quarto slides
         run: |
-          quarto render slides/comprepds/comp_rep_ds.qmd slides/ICAIDS2026/icaids-2026-UNCA.qmd
+          quarto render slides/comprepds/comp_rep_ds.qmd
+          quarto render slides/ICAIDS2026/icaids-2026-UNCA.qmd
           ls -laR _site
 
       - name: Setup Git for gh-pages commit
