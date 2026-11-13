@@ -235,6 +235,35 @@ But you might not know the terminology required to describe it.
 
 — Carl Jung (attributed)
 
+---
+
+## A simple task for AI (1)
+
+![](./images/data-literacy-vs-data-vis-v1-2026-11-13-09-47-06.png){fig-align="center" width=1000px}
+
+---
+
+## A simple task for AI (2)
+
+> Fix the text to fit inside the circle.
+
+![](./images/data-literacy-vs-data-vis-v2-2026-11-13-09-48-51.png){fig-align="center" width=1000px}
+
+---
+
+## A simple task for AI (3)
+
+> Part of the text is still outside the circle. Fix it and provide the code.
+
+![](./images/data-literacy-vs-data-vis.svg){fig-align="center" width=1000px}
+
+---
+
+## A simple task for the human
+
+> Key takeaway: learn the fundamentals.
+
+![](./images/data-literacy-vs-data-vis.svg){fig-align="center" width=1000px}
 
 ---
 
