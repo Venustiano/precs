@@ -24,6 +24,7 @@ format:
 execute:
   echo: false
   warning: false
+  python.reticulate: false
 ---
 
 <style>
