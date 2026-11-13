@@ -263,7 +263,7 @@ But you might not know the terminology required to describe it.
 
 > Key takeaway: learn the fundamentals.
 
-![](./images/data-literacy-vs-data-vis.svg){fig-align="center" width=1000px}
+![](./images/data-literacy-vs-data-vis-fixed.svg){fig-align="center" width=1000px}
 
 ---
 
