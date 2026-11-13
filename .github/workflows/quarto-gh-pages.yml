@@ -43,7 +43,7 @@ jobs:
 
       - name: Install R packages needed by the slides
         run: |
-          R -e "install.packages(c('rmarkdown', 'knitr', 'ggplot2'), repos='https://cloud.r-project.org/')"
+          R -e "install.packages(c('rmarkdown', 'knitr', 'ggplot2','reticulate'), repos='https://cloud.r-project.org/')"
           R -e "stopifnot(requireNamespace('rmarkdown', quietly = TRUE), requireNamespace('knitr', quietly = TRUE), requireNamespace('ggplot2', quietly = TRUE))"
 
       - name: Render Quarto slides
