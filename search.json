@@ -300,11 +300,11 @@
     ]
   },
   {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-ai-generates-vs.-what-humans-decide",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-ai-generates-vs.-what-humans-decide",
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#ai-vs.-humans",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#ai-vs.-humans",
     "title": "Data Visualization in the Age of AI",
-    "section": "What AI generates vs. what humans decide",
-    "text": "What AI generates vs. what humans decide\n\n\n\nAI-generated chart (left) vs. human-designed chart (right) of manager performance before and after a training program\n\n\n\n\n\nKnaflic, C. N. (2026, April 23). Data storytelling in the age of AI: what humans still do best. Storytelling with Data",
+    "section": "AI vs. humans",
+    "text": "AI vs. humans\n\n\n\nAI-generated chart (left) vs. human-designed chart (right)\n\n\n\n\n\nKnaflic, C. N. (2026, April 23). Data storytelling in the age of AI: what humans still do best. Storytelling with Data",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
@@ -344,7 +344,7 @@
     "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#asking-the-right-questions",
     "title": "Data Visualization in the Age of AI",
     "section": "Asking the right questions",
-    "text": "Asking the right questions\n\nTo ask the right question is already half the solution of a problem.\n\n— Carl Jung (attributed)\nThe challenge of asking good questions is much older than artificial intelligence.",
+    "text": "Asking the right questions\n\nTo ask the right question is already half the solution of a problem.\n\n— Carl Jung (attributed)",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
@@ -364,7 +364,7 @@
     "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#use-case",
     "title": "Data Visualization in the Age of AI",
     "section": "USE CASE",
-    "text": "USE CASE\n\nTeaching practical data visualization for PhD students\n\nConside that students have different:\n\nbackgrounds and skills\ndata\nsample code\ninterests\nhardware\nOperating systems",
+    "text": "USE CASE\n\nTeaching practical data visualization for PhD students\n\nConsider that students have different:\n\nbackgrounds and skills\ndata\ninterests\nhardware\nOperating systems",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
@@ -400,11 +400,51 @@
     ]
   },
   {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#example-of-the-templates",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#example-of-the-templates",
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#template-notebook-load-the-data",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#template-notebook-load-the-data",
     "title": "Data Visualization in the Age of AI",
-    "section": "Example of the Templates",
-    "text": "Example of the Templates",
+    "section": "Template Notebook: Load the Data",
+    "text": "Template Notebook: Load the Data\n \n\n# 🟨 STUDENT INPUT — set the path to your data file, then run this cell (Shift + Enter)\nfile_path = \"your_data.csv\"\n\n# ▶️ RUN — load the required packages and read the file\nimport pandas as pd\n\n# For a CSV file:\ndf = pd.read_csv(file_path)\n\n\nprint(\"Dataset loaded in the 'df' dataframe\")",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#template-notebook-explore-the-dataset-metadata",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#template-notebook-explore-the-dataset-metadata",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Template Notebook: Explore the dataset (Metadata)",
+    "text": "Template Notebook: Explore the dataset (Metadata)\n \n\n# ▶️ RUN — explore the dataset\nprint(\"First 5 rows:\")\ndisplay(df.head())\n\nprint(\"\\nRows and columns:\", df.shape)\n\nprint(\"\\nColumn names:\", df.columns.tolist())\n\nprint(\"\\nData types and non-null counts:\")\ndf.info()\n\nprint(\"\\nSummary statistics:\")\ndisplay(df.describe(include=\"all\").T)\n\nprint(\"\\nMissing values per column:\")\ndisplay(df.isna().sum().to_frame(\"missing_values\"))",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#template-notebook-prompt-to-prepare-the-data",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#template-notebook-prompt-to-prepare-the-data",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Template Notebook: Prompt to prepare the data",
+    "text": "Template Notebook: Prompt to prepare the data\n \nGiven my research question/goal \"[YOUR RESEARCH QUESTION/GOAL]\"\n\nand my dataframe \"df\" with the following structure\n\n\n[PASTE HERE the output of the exploration cell in section 3]\n\n\npropose the minimum data-preparation steps and provide the python code. \nExplain why each step is needed. Do not remove or alter observations without explaining the consequences.\n\n# 🟩 Paste the data-preparation code returned by the AI here,\n# read it, and run the cell (Shift + Enter).",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#template-notebook-prompt-to-choose-a-visualizaion",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#template-notebook-prompt-to-choose-a-visualizaion",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Template Notebook: Prompt to Choose a Visualizaion",
+    "text": "Template Notebook: Prompt to Choose a Visualizaion\n\n🟦 COPY → AI (edit, then copy this whole cell and paste it into your AI chat)\n\nGiven my research question \"[YOUR RESEARCH QUESTION]\"\n\nand my prepared dataframe 'data' with the following checks and structure\n\n\"\"\"\n[PASTE HERE the output of the preparation cell in section 4]\n\"\"\"\n\nRecommend suitable chart types for this research question and these variables. \nCompare their strengths and limitations. \nConsider the measurement scales and whether the data are ordered, categorical, or continuous. \nDo not create the chart yet.",
+    "crumbs": [
+      "Data Visualization in the Age of AI"
+    ]
+  },
+  {
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#template-notebook-prompt-to-create-the-first-visualization",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#template-notebook-prompt-to-create-the-first-visualization",
+    "title": "Data Visualization in the Age of AI",
+    "section": "Template Notebook: Prompt to create the first visualization",
+    "text": "Template Notebook: Prompt to create the first visualization\n\n🟦 COPY → AI (edit, then copy this whole cell and paste it into your AI chat)\n\nWrite Python code for the [CHOSEN CHART TYPE]. \n\nUse my existing dataframe named `data` and these exact columns: [COLUMN NAMES].\n Include a descriptive title, axis labels with units, and an appropriate legend if needed. \n \n Explain the code and flag assumptions.",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
@@ -424,57 +464,47 @@
     "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#visualization-tasks",
     "title": "Data Visualization in the Age of AI",
     "section": "Visualization tasks",
-    "text": "Visualization tasks\n\nTransform the data from long to wide format Normalize the data Create a histogram\n\n\nReproduce a disease plot Merge 2 datasets Create an interactive Heatmap\n\n\nSelect a chart from the Fundamentals of Data Visualizatio book from Claus O. Wilke Render the chapter and save the data for later use Ask AI to rewrite the code in Python and Plotly",
+    "text": "Visualization tasks\n\n\n\n\n\n\n\nTask 1\n\n\n\nTransform the data from long to wide format\nNormalize the data\nCreate a histogram\n\n\n\n\n\n\n\n\n\n\n\n\nTask 2\n\n\n\nReproduce a disease plot\nMerge 2 datasets\nCreate an interactive heatmap\n\n\n\n\n\n\n\n\n\n\n\n\nTask 3\n\n\n\nSelect a chart from the Fundamentals of Data Visualization book, by Claus O. Wilke\nRender the chapter and save the data for later use\nAsk AI to rewrite the code in Python and Plotly",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
   },
   {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#results",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#results",
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#task-1-preliminary-results",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#task-1-preliminary-results",
     "title": "Data Visualization in the Age of AI",
-    "section": "Results",
-    "text": "Results",
+    "section": "TASK 1: Preliminary Results",
+    "text": "TASK 1: Preliminary Results",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
   },
   {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#from-laborers-to-supervisors",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#from-laborers-to-supervisors",
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#programming-experience-vs.-ease-of-workflow",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#programming-experience-vs.-ease-of-workflow",
     "title": "Data Visualization in the Age of AI",
-    "section": "From laborers to supervisors",
-    "text": "From laborers to supervisors\nAI is changing the relationship between humans and the production of knowledge.\n\n\nBefore AI\nThe human as implementer\n\nWrite code.\nProcess data.\nCreate charts.\nAdjust layouts.\nImplement interactions.\n\n\nWith AI\nThe human as supervisor\n\nDefine problems.\nEstablish objectives.\nSpecify requirements.\nEvaluate outputs.\nProvide feedback.\nExercise judgment.\n\n\n\nThe work does not disappear.\nThe nature of the work changes.",
+    "section": "Programming experience vs. ease of workflow",
+    "text": "Programming experience vs. ease of workflow",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
   },
   {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-center-of-distribution-problem",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#the-center-of-distribution-problem",
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#student-feedback-key-takeaways",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#student-feedback-key-takeaways",
     "title": "Data Visualization in the Age of AI",
-    "section": "The center-of-distribution problem",
-    "text": "The center-of-distribution problem\nWhat happens when we do not know precisely what we want?\nAI tends to produce a statistically plausible response based on its learned patterns and the context provided.\nThe result may be reasonable, conventional, and technically correct.\nBut is it what we actually need?\n\nThe problem\nWhen we cannot articulate our intentions, we risk receiving the statistical average rather than the particular solution we envisioned.\n\n\nThe consequence\nThe ability to exercise design judgment becomes increasingly valuable.",
+    "section": "Student Feedback: Key Takeaways",
+    "text": "Student Feedback: Key Takeaways\n\nUser-friendly environment\n\nHábrók is easy to use.\nFile upload and download are convenient.\n\nClearer instructions\n\nExplain file paths and working directories.\nProvide more guidance for beginners.\nImprove visual separation between sections.\n\nPositive learning experience\n\nAI helps explain errors and generate code.\nAlways verify AI suggestions against actual results.",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
   },
   {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#design-becomes-the-scarce-resource",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#design-becomes-the-scarce-resource",
+    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#preliminary-experiment-takeaways",
+    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#preliminary-experiment-takeaways",
     "title": "Data Visualization in the Age of AI",
-    "section": "Design becomes the scarce resource",
-    "text": "Design becomes the scarce resource\nWhen AI handles implementation, the bottleneck shifts.\n\n\nImplementation\nAI can increasingly help with:\n\nProgramming.\nData transformation.\nChart generation.\nStyling.\nRepetitive tasks.\n\n\nDesign and judgment\nHumans still need to:\n\nDefine the problem.\nUnderstand the audience.\nSelect visual encodings.\nEvaluate perception.\nMake design decisions.\nRecognize mediocre results.\n\n\n\nKnowing what to ask for, exercising taste, and evaluating the result become the scarce resources.",
-    "crumbs": [
-      "Data Visualization in the Age of AI"
-    ]
-  },
-  {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-does-being-a-supervisor-require",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#what-does-being-a-supervisor-require",
-    "title": "Data Visualization in the Age of AI",
-    "section": "What does being a supervisor require?",
-    "text": "What does being a supervisor require?\nBeing a supervisor is not simply writing a prompt and accepting the output.\nIt requires specific skills:\n\nProblem definition: What are we trying to solve?\nGoal setting: What should the result achieve?\nCommunication: Can we specify our requirements?\nFeedback: Can we identify what needs improvement?\nAccountability: Can we evaluate the consequences?\nJudgment: Can we distinguish good results from mediocre ones?\n\n\nThese are skills that we must deliberately develop.",
+    "section": "Preliminary Experiment Takeaways",
+    "text": "Preliminary Experiment Takeaways\n\nNotebooks are promising for teaching data visalization\nMost of the students succeeded to conclude the tasks\nGiven a proper context, AI generates code that works",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
@@ -484,47 +514,7 @@
     "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#implications-for-data-visualization-education",
     "title": "Data Visualization in the Age of AI",
     "section": "Implications for data visualization education",
-    "text": "Implications for data visualization education\nIf AI handles more of the coding, should we spend less time learning?\nNot necessarily.\nIn fact, the opposite may be true.\n\nMore theory, less mechanical practice\n\n\nUnderstand visual variables.\nLearn principles of human visual perception.\nUnderstand graphical perception.\nStudy visual encoding and representation.\nDevelop design cognition.\nLearn to evaluate and critique visualizations.\n\n\n\n\n\n\n\nImportant\n\n\nUnderstanding design principles becomes more important, not less, because these principles enable us to supervise AI effectively and challenge mediocre outputs.",
-    "crumbs": [
-      "Data Visualization in the Age of AI"
-    ]
-  },
-  {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#think-before-generating",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#think-before-generating",
-    "title": "Data Visualization in the Age of AI",
-    "section": "Think before generating",
-    "text": "Think before generating\nAI can generate high-fidelity visualizations very quickly.\nBut generating a polished result too early can be counterproductive.\nA more productive workflow is:\n\n\n\n\n\nflowchart LR\n    A[\"Understand the problem\"] --&gt; B[\"Explore possible solutions\"]\n    B --&gt; C[\"Develop your own ideas\"]\n    C --&gt; D[\"Discuss and refine with AI\"]\n    D --&gt; E[\"Specify requirements\"]\n    E --&gt; F[\"Generate visualization\"]\n    F --&gt; G[\"Evaluate and critique\"]\n    G --&gt; H{\"Does it communicate?\"}\n    H --&gt;|No| D\n    H --&gt;|Yes| I[\"Communicate insights\"]\n\n    style A fill:#dceeff,stroke:#3572a5\n    style C fill:#fff0cc,stroke:#c18b20\n    style D fill:#fff0cc,stroke:#c18b20\n    style G fill:#d8f3dc,stroke:#39834b\n    style I fill:#dceeff,stroke:#3572a5\n\n\n\n\n\n\nThink first. Generate later.",
-    "crumbs": [
-      "Data Visualization in the Age of AI"
-    ]
-  },
-  {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#decompose-the-problem",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#decompose-the-problem",
-    "title": "Data Visualization in the Age of AI",
-    "section": "Decompose the problem",
-    "text": "Decompose the problem\nA useful principle when working with AI:\n\nThe more you chop your problem into small pieces, the better AI handles them.\n\nInstead of asking:\n\n\n\n\n\n\nTip\n\n\n“Create a complete and effective visualization of my dataset.”\n\n\n\nBreak the task into smaller questions:\n\nWhat is the structure of my dataset?\nWhat questions can I investigate?\nWhich variables are relevant?\nWhat visual encodings are appropriate?\nWhat chart design communicates the message?\nHow can I evaluate the result?\n\n\nDecomposition makes complex tasks more manageable, both for humans and AI.",
-    "crumbs": [
-      "Data Visualization in the Age of AI"
-    ]
-  },
-  {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#final-thoughts",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#final-thoughts",
-    "title": "Data Visualization in the Age of AI",
-    "section": "Final thoughts",
-    "text": "Final thoughts\n\nAI makes visualization implementation increasingly accessible.\nAccessibility does not automatically produce effective visualizations.\nData literacy and design knowledge remain essential.\nAsking good questions requires understanding the problem.\nSupervising AI requires critical thinking and visual judgment.",
-    "crumbs": [
-      "Data Visualization in the Age of AI"
-    ]
-  },
-  {
-    "objectID": "slides/ICAIDS2026/icaids-2026-UNCA.html#references-and-further-reading",
-    "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#references-and-further-reading",
-    "title": "Data Visualization in the Age of AI",
-    "section": "References and further reading",
-    "text": "References and further reading\n\nData Visualization in the Age of AI — Center for Design\nComputational Representation of Data Science\nThe Socratic Method — Analysis\nFundamentals of Data Visualization — Claus O. Wilke",
+    "text": "Implications for data visualization education\nIf AI handles more of the coding, should we spend less time learning?\n\nIn fact, the opposite may be true.\n\nMore theory, less mechanical practice\n\nLearn principles of human visual perception.\nStudy visual encoding and representation.\nLearn to evaluate and critique visualizations.\n\n\n\n\n\n\n\nImportant\n\n\nUnderstanding design principles becomes more important, not less, because these principles enable us to supervise AI effectively and challenge inefective outputs.",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]
@@ -534,7 +524,7 @@
     "href": "slides/ICAIDS2026/icaids-2026-UNCA.html#thank-you",
     "title": "Data Visualization in the Age of AI",
     "section": "Thank you!",
-    "text": "Thank you!",
+    "text": "Thank you!\n\nThe future belongs not to those who can generate the most answers, but to those who know how to ask the right questions.",
     "crumbs": [
       "Data Visualization in the Age of AI"
     ]

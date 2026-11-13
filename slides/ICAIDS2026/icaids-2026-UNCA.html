@@ -29,6 +29,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -124,9 +190,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -153,7 +216,7 @@ Venustiano Soancatl Aguilar
 
 <style>
 .reveal {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .reveal h1 {
@@ -279,12 +342,12 @@ Venustiano Soancatl Aguilar
 
 </blockquote>
 </section>
-<section id="what-ai-generates-vs.-what-humans-decide" class="slide level2">
-<h2>What AI generates vs.&nbsp;what humans decide</h2>
+<section id="ai-vs.-humans" class="slide level2">
+<h2>AI vs.&nbsp;humans</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/AI-vs-human.png" width="800"></p>
-<figcaption>AI-generated chart (left) vs.&nbsp;human-designed chart (right) of manager performance before and after a training program</figcaption>
+<figcaption>AI-generated chart (left) vs.&nbsp;human-designed chart (right)</figcaption>
 </figure>
 </div>
 
@@ -334,7 +397,6 @@ Venustiano Soancatl Aguilar
 <p>To ask the right question is already half the solution of a problem.</p>
 </blockquote>
 <p>— Carl Jung (attributed)</p>
-<p>The challenge of asking good questions is much older than artificial intelligence.</p>
 </section>
 <section id="ai-data-restrictions-to-generate-visualizations" class="slide level2">
 <h2>AI data restrictions to generate visualizations</h2>
@@ -352,11 +414,10 @@ Venustiano Soancatl Aguilar
 <blockquote>
 <p>Teaching practical data visualization for PhD students</p>
 </blockquote>
-<p>Conside that students have different:</p>
+<p>Consider that students have different:</p>
 <ul>
 <li>backgrounds and skills</li>
 <li>data</li>
-<li>sample code</li>
 <li>interests</li>
 <li>hardware</li>
 <li>Operating systems</li>
@@ -399,8 +460,89 @@ Venustiano Soancatl Aguilar
 <li>The Mapping of variables in to marks (aesthetics)</li>
 </ul>
 </section>
-<section id="example-of-the-templates" class="slide level2">
-<h2>Example of the Templates</h2>
+<section id="template-notebook-load-the-data" class="slide level2">
+<h2>Template Notebook: Load the Data</h2>
+<p><br> <br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a></span>
+<span id="cb1-2"><a></a><span class="co"># 🟨 STUDENT INPUT — set the path to your data file, then run this cell (Shift + Enter)</span></span>
+<span id="cb1-3"><a></a>file_path <span class="op">=</span> <span class="st">"your_data.csv"</span></span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a><span class="co"># ▶️ RUN — load the required packages and read the file</span></span>
+<span id="cb1-6"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-7"><a></a></span>
+<span id="cb1-8"><a></a><span class="co"># For a CSV file:</span></span>
+<span id="cb1-9"><a></a>df <span class="op">=</span> pd.read_csv(file_path)</span>
+<span id="cb1-10"><a></a></span>
+<span id="cb1-11"><a></a></span>
+<span id="cb1-12"><a></a><span class="bu">print</span>(<span class="st">"Dataset loaded in the 'df' dataframe"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="template-notebook-explore-the-dataset-metadata" class="slide level2">
+<h2>Template Notebook: Explore the dataset (Metadata)</h2>
+<p><br> <br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a></span>
+<span id="cb2-2"><a></a><span class="co"># ▶️ RUN — explore the dataset</span></span>
+<span id="cb2-3"><a></a><span class="bu">print</span>(<span class="st">"First 5 rows:"</span>)</span>
+<span id="cb2-4"><a></a>display(df.head())</span>
+<span id="cb2-5"><a></a></span>
+<span id="cb2-6"><a></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Rows and columns:"</span>, df.shape)</span>
+<span id="cb2-7"><a></a></span>
+<span id="cb2-8"><a></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Column names:"</span>, df.columns.tolist())</span>
+<span id="cb2-9"><a></a></span>
+<span id="cb2-10"><a></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Data types and non-null counts:"</span>)</span>
+<span id="cb2-11"><a></a>df.info()</span>
+<span id="cb2-12"><a></a></span>
+<span id="cb2-13"><a></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Summary statistics:"</span>)</span>
+<span id="cb2-14"><a></a>display(df.describe(include<span class="op">=</span><span class="st">"all"</span>).T)</span>
+<span id="cb2-15"><a></a></span>
+<span id="cb2-16"><a></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Missing values per column:"</span>)</span>
+<span id="cb2-17"><a></a>display(df.isna().<span class="bu">sum</span>().to_frame(<span class="st">"missing_values"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="template-notebook-prompt-to-prepare-the-data" class="slide level2">
+<h2>Template Notebook: Prompt to prepare the data</h2>
+<p><br> <br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>Given my research question/goal "[YOUR RESEARCH QUESTION/GOAL]"</span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a>and my dataframe "df" with the following structure</span>
+<span id="cb3-4"><a></a></span>
+<span id="cb3-5"><a></a></span>
+<span id="cb3-6"><a></a>[PASTE HERE the output of the exploration cell in section 3]</span>
+<span id="cb3-7"><a></a></span>
+<span id="cb3-8"><a></a></span>
+<span id="cb3-9"><a></a>propose the minimum data-preparation steps and provide the python code. </span>
+<span id="cb3-10"><a></a>Explain why each step is needed. Do not remove or alter observations without explaining the consequences.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a><span class="fu"># 🟩 Paste the data-preparation code returned by the AI here,</span></span>
+<span id="cb4-2"><a></a><span class="fu"># read it, and run the cell (Shift + Enter).</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="template-notebook-prompt-to-choose-a-visualizaion" class="slide level2">
+<h2>Template Notebook: Prompt to Choose a Visualizaion</h2>
+<p><br><br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a>🟦 COPY → AI (edit, then copy this whole cell and paste it into your AI chat)</span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a>Given my research question "<span class="co">[</span><span class="ot">YOUR RESEARCH QUESTION</span><span class="co">]</span>"</span>
+<span id="cb5-4"><a></a></span>
+<span id="cb5-5"><a></a>and my prepared dataframe 'data' with the following checks and structure</span>
+<span id="cb5-6"><a></a></span>
+<span id="cb5-7"><a></a>"""</span>
+<span id="cb5-8"><a></a><span class="co">[</span><span class="ot">PASTE HERE the output of the preparation cell in section 4</span><span class="co">]</span></span>
+<span id="cb5-9"><a></a>"""</span>
+<span id="cb5-10"><a></a></span>
+<span id="cb5-11"><a></a>Recommend suitable chart types for this research question and these variables. </span>
+<span id="cb5-12"><a></a>Compare their strengths and limitations. </span>
+<span id="cb5-13"><a></a>Consider the measurement scales and whether the data are ordered, categorical, or continuous. </span>
+<span id="cb5-14"><a></a>Do not create the chart yet.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="template-notebook-prompt-to-create-the-first-visualization" class="slide level2">
+<h2>Template Notebook: Prompt to create the first visualization</h2>
+<p><br><br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a>🟦 COPY → AI (edit, then copy this whole cell and paste it into your AI chat)</span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a>Write Python code for the <span class="co">[</span><span class="ot">CHOSEN CHART TYPE</span><span class="co">]</span>. </span>
+<span id="cb6-4"><a></a></span>
+<span id="cb6-5"><a></a>Use my existing dataframe named <span class="in">`data`</span> and these exact columns: <span class="co">[</span><span class="ot">COLUMN NAMES</span><span class="co">]</span>.</span>
+<span id="cb6-6"><a></a> Include a descriptive title, axis labels with units, and an appropriate legend if needed. </span>
+<span id="cb6-7"><a></a> </span>
+<span id="cb6-8"><a></a> Explain the code and flag assumptions.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="minimal-training-for-students" class="slide level2">
 <h2>Minimal training for students</h2>
@@ -413,126 +555,114 @@ Venustiano Soancatl Aguilar
 </section>
 <section id="visualization-tasks" class="slide level2">
 <h2>Visualization tasks</h2>
-<blockquote>
-<p>Transform the data from long to wide format Normalize the data Create a histogram</p>
-</blockquote>
-<blockquote>
-<p>Reproduce a disease plot Merge 2 datasets Create an interactive Heatmap</p>
-</blockquote>
-<blockquote>
-<p>Select a chart from the <code>Fundamentals of Data Visualizatio</code> book from Claus O. Wilke Render the chapter and save the data for later use Ask AI to rewrite the code in Python and Plotly</p>
-</blockquote>
-</section>
-<section id="results" class="slide level2">
-<h2>Results</h2>
-</section>
-<section id="from-laborers-to-supervisors" class="slide level2">
-<h2>From laborers to supervisors</h2>
-<p>AI is changing the relationship between humans and the production of knowledge.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="before-ai">Before AI</h3>
-<p><strong>The human as implementer</strong></p>
+<div title="Task 1">
+<div class="callout callout-note callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Task 1</strong></p>
+</div>
+<div class="callout-content">
 <ul>
-<li>Write code.</li>
-<li>Process data.</li>
-<li>Create charts.</li>
-<li>Adjust layouts.</li>
-<li>Implement interactions.</li>
+<li>Transform the data from long to wide format</li>
+<li>Normalize the data</li>
+<li>Create a histogram</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<h3 id="with-ai">With AI</h3>
-<p><strong>The human as supervisor</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div title="Task 2">
+<div class="callout callout-tip callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Task 2</strong></p>
+</div>
+<div class="callout-content">
 <ul>
-<li>Define problems.</li>
-<li>Establish objectives.</li>
-<li>Specify requirements.</li>
-<li>Evaluate outputs.</li>
-<li>Provide feedback.</li>
-<li>Exercise judgment.</li>
+<li>Reproduce a disease plot</li>
+<li>Merge 2 datasets</li>
+<li>Create an interactive heatmap</li>
 </ul>
-</div></div>
-<div class="fragment">
-<p>The work does not disappear.</p>
-<p><strong>The nature of the work changes.</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div title="Task 3">
+<div class="callout callout-important callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Task 3</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Select a chart from the <em>Fundamentals of Data Visualization</em> book, by Claus O. Wilke</li>
+<li>Render the chapter and save the data for later use</li>
+<li>Ask AI to rewrite the code in Python and Plotly</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 </section>
-<section id="the-center-of-distribution-problem" class="slide level2">
-<h2>The center-of-distribution problem</h2>
-<p>What happens when we do not know precisely what we want?</p>
-<p>AI tends to produce a statistically plausible response based on its learned patterns and the context provided.</p>
-<p>The result may be reasonable, conventional, and technically correct.</p>
-<p>But is it what we actually need?</p>
-<div class="fragment">
-<h3 id="the-problem">The problem</h3>
-<p>When we cannot articulate our intentions, we risk receiving the statistical average rather than the particular solution we envisioned.</p>
-</div>
-<div class="fragment">
-<h3 id="the-consequence">The consequence</h3>
-<p>The ability to exercise design judgment becomes increasingly valuable.</p>
+<section id="task-1-preliminary-results" class="slide level2">
+<h2>TASK 1: Preliminary Results</h2>
+
+<img data-src="images/heatmap_ratings.png" class="r-stretch"></section>
+<section id="programming-experience-vs.-ease-of-workflow" class="slide level2">
+<h2>Programming experience vs.&nbsp;ease of workflow</h2>
+<div style="display:flex; justify-content:center;">
+<p><iframe src="images/parcats_jupyterlab.html" width="1200" height="800" style="border:none;"></iframe></p>
 </div>
 </section>
-<section id="design-becomes-the-scarce-resource" class="slide level2">
-<h2>Design becomes the scarce resource</h2>
-<p>When AI handles implementation, the bottleneck shifts.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="implementation">Implementation</h3>
-<p>AI can increasingly help with:</p>
+<section id="student-feedback-key-takeaways" class="slide level2">
+<h2>Student Feedback: Key Takeaways</h2>
 <ul>
-<li>Programming.</li>
-<li>Data transformation.</li>
-<li>Chart generation.</li>
-<li>Styling.</li>
-<li>Repetitive tasks.</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<h3 id="design-and-judgment">Design and judgment</h3>
-<p>Humans still need to:</p>
+<li><strong>User-friendly environment</strong>
 <ul>
-<li>Define the problem.</li>
-<li>Understand the audience.</li>
-<li>Select visual encodings.</li>
-<li>Evaluate perception.</li>
-<li>Make design decisions.</li>
-<li>Recognize mediocre results.</li>
+<li>Hábrók is easy to use.</li>
+<li>File upload and download are convenient.</li>
+</ul></li>
+<li><strong>Clearer instructions</strong>
+<ul>
+<li>Explain file paths and working directories.</li>
+<li>Provide more guidance for beginners.</li>
+<li>Improve visual separation between sections.</li>
+</ul></li>
+<li><strong>Positive learning experience</strong>
+<ul>
+<li>AI helps explain errors and generate code.</li>
+<li>Always verify AI suggestions against actual results.</li>
+</ul></li>
 </ul>
-</div></div>
-<div class="fragment">
-<p><strong>Knowing what to ask for, exercising taste, and evaluating the result become the scarce resources.</strong></p>
-</div>
 </section>
-<section id="what-does-being-a-supervisor-require" class="slide level2">
-<h2>What does being a supervisor require?</h2>
-<p>Being a supervisor is not simply writing a prompt and accepting the output.</p>
-<p>It requires specific skills:</p>
+<section id="preliminary-experiment-takeaways" class="slide level2">
+<h2>Preliminary Experiment Takeaways</h2>
 <ul>
-<li class="fragment"><strong>Problem definition:</strong> What are we trying to solve?</li>
-<li class="fragment"><strong>Goal setting:</strong> What should the result achieve?</li>
-<li class="fragment"><strong>Communication:</strong> Can we specify our requirements?</li>
-<li class="fragment"><strong>Feedback:</strong> Can we identify what needs improvement?</li>
-<li class="fragment"><strong>Accountability:</strong> Can we evaluate the consequences?</li>
-<li class="fragment"><strong>Judgment:</strong> Can we distinguish good results from mediocre ones?</li>
+<li><strong>Notebooks are promising for teaching data visalization</strong></li>
+<li><strong>Most of the students succeeded to conclude the tasks</strong></li>
+<li><strong>Given a proper context, AI generates code that works</strong></li>
 </ul>
-<div class="fragment">
-<p>These are skills that we must deliberately develop.</p>
-</div>
 </section>
 <section id="implications-for-data-visualization-education" class="slide level2">
 <h2>Implications for data visualization education</h2>
 <p>If AI handles more of the coding, should we spend less time learning?</p>
-<p>Not necessarily.</p>
+<blockquote>
 <p>In fact, the opposite may be true.</p>
-<div class="fragment">
+</blockquote>
 <h3 id="more-theory-less-mechanical-practice">More theory, less mechanical practice</h3>
-</div>
 <ul>
-<li class="fragment">Understand visual variables.</li>
-<li class="fragment">Learn principles of human visual perception.</li>
-<li class="fragment">Understand graphical perception.</li>
-<li class="fragment">Study visual encoding and representation.</li>
-<li class="fragment">Develop design cognition.</li>
-<li class="fragment">Learn to evaluate and critique visualizations.</li>
+<li>Learn principles of human visual perception.</li>
+<li>Study visual encoding and representation.</li>
+<li>Learn to evaluate and critique visualizations.</li>
 </ul>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
@@ -543,115 +673,16 @@ Venustiano Soancatl Aguilar
 <p><strong>Important</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Understanding design principles becomes more important, not less, because these principles enable us to supervise AI effectively and challenge mediocre outputs.</strong></p>
+<p><strong>Understanding design principles becomes more important, not less, because these principles enable us to supervise AI effectively and challenge inefective outputs.</strong></p>
 </div>
 </div>
 </div>
-</section>
-<section id="think-before-generating" class="slide level2">
-<h2>Think before generating</h2>
-<p>AI can generate high-fidelity visualizations very quickly.</p>
-<p>But generating a polished result too early can be counterproductive.</p>
-<p>A more productive workflow is:</p>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-    A["Understand the problem"] --&gt; B["Explore possible solutions"]
-    B --&gt; C["Develop your own ideas"]
-    C --&gt; D["Discuss and refine with AI"]
-    D --&gt; E["Specify requirements"]
-    E --&gt; F["Generate visualization"]
-    F --&gt; G["Evaluate and critique"]
-    G --&gt; H{"Does it communicate?"}
-    H --&gt;|No| D
-    H --&gt;|Yes| I["Communicate insights"]
-
-    style A fill:#dceeff,stroke:#3572a5
-    style C fill:#fff0cc,stroke:#c18b20
-    style D fill:#fff0cc,stroke:#c18b20
-    style G fill:#d8f3dc,stroke:#39834b
-    style I fill:#dceeff,stroke:#3572a5
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<p><strong>Think first. Generate later.</strong></p>
-</section>
-<section id="decompose-the-problem" class="slide level2">
-<h2>Decompose the problem</h2>
-<p>A useful principle when working with AI:</p>
-<blockquote>
-<p>The more you chop your problem into small pieces, the better AI handles them.</p>
-</blockquote>
-<p>Instead of asking:</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>“Create a complete and effective visualization of my dataset.”</p>
-</div>
-</div>
-</div>
-<p>Break the task into smaller questions:</p>
-<ol type="1">
-<li>What is the structure of my dataset?</li>
-<li>What questions can I investigate?</li>
-<li>Which variables are relevant?</li>
-<li>What visual encodings are appropriate?</li>
-<li>What chart design communicates the message?</li>
-<li>How can I evaluate the result?</li>
-</ol>
-<div class="fragment">
-<p><strong>Decomposition makes complex tasks more manageable, both for humans and AI.</strong></p>
-</div>
-</section>
-<section id="final-thoughts" class="slide level2">
-<h2>Final thoughts</h2>
-<ul>
-<li class="fragment">AI makes visualization implementation increasingly accessible.</li>
-<li class="fragment">Accessibility does not automatically produce effective visualizations.</li>
-<li class="fragment">Data literacy and design knowledge remain essential.</li>
-<li class="fragment">Asking good questions requires understanding the problem.</li>
-<li class="fragment">Supervising AI requires critical thinking and visual judgment.</li>
-</ul>
-</section>
-<div class="fragment">
-<section id="the-future-is-not-just-about-generating-visualizations." class="title-slide slide level1 center">
-<h1>The future is not just about generating visualizations.</h1>
-
-</section>
-
-<section id="it-is-about-knowing-what-is-worth-visualizing." class="title-slide slide level1 center">
-<h1>It is about knowing what is worth visualizing.</h1>
-
-</section>
-
-</div>
-<section id="references-and-further-reading" class="slide level2">
-<h2>References and further reading</h2>
-<ul>
-<li><a href="https://medium.com/center-for-design/data-visualization-in-the-age-of-ai-6f44a7024208">Data Visualization in the Age of AI — Center for Design</a></li>
-<li><a href="https://venustiano.github.io/precs/slides/comprepds/comp_rep_ds.html">Computational Representation of Data Science</a></li>
-<li><a href="https://plato.sydney.edu.au/entries/analysis/s2.html">The Socratic Method — Analysis</a></li>
-<li><a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualization — Claus O. Wilke</a></li>
-</ul>
 </section>
 <section id="thank-you" class="slide level2">
 <h2>Thank you!</h2>
-</section>
-<section id="questions-and-discussion" class="title-slide slide level1 center">
-<h1>Questions and discussion</h1>
-<p><strong>What should we teach when AI can generate the visualization for us?</strong></p>
+<div class="absolute" style="text-align: center;top: 35%; left: 15%; right: 15%; ">
+<p><strong>The future belongs not to those who can generate the most answers, but to those who know how to ask the right questions.</strong></p>
+</div>
 
 
 </section>
