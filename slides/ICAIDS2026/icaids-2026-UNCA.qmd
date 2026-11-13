@@ -24,7 +24,6 @@ format:
 execute:
   echo: false
   warning: false
-  python.reticulate: false
 ---
 
 <style>
@@ -302,9 +301,7 @@ Consider that students have different:
 ## Template Notebook: Load the Data
 <br>
 <br>
-```{python}
-#| echo: true
-#| eval: false
+```python
 
 # 🟨 STUDENT INPUT — set the path to your data file, then run this cell (Shift + Enter)
 file_path = "your_data.csv"
@@ -326,9 +323,7 @@ print("Dataset loaded in the 'df' dataframe")
 <br>
 <br>
 
-```{python}
-#| echo: true
-#| eval: false
+```python
 
 # ▶️ RUN — explore the dataset
 print("First 5 rows:")
