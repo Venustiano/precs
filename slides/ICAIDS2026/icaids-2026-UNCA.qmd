@@ -3,7 +3,7 @@ title: "Data Visualization in the Age of AI"
 subtitle: "A PhD students case study"
 author: "Venustiano Soancatl Aguilar"
 institute: "7th International Conference on Artificial Intelligence and Data Science (2026) — UNCA"
-date: "2026"
+date: "13 November 2026"
 lang: en
 
 format:
